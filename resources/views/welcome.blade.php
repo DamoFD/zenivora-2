@@ -16,7 +16,7 @@
     <body class="antialiased">
         <section class="w-full h-screen justify-center items-center flex flex-col overflow-x-hidden" id="hero">
         <canvas class="fixed h-screen w-full bg-[#232323] top-0 left-0" id="canvas"></canvas>
-        <h1 class="z-[2] font-extrabold text-5xl text-blue-300 uppercase typing">Zenivora</h1>
+        <h1 class="z-[2] font-extrabold text-5xl text-[#02ffd7] uppercase typing mb-10">Zenivora</h1>
         <h2 class="span loader uppercase zoom-out">
         <span>R</span>
         <span>e</span>

@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-span:hover {
-  color: #ff0266;
-  font-weight: 500;
-  font-size: 2.2vw;
-}
-
 h2.span {
   font-size: 2vw;
   letter-spacing: 0.1em;
@@ -29,9 +23,10 @@ h2.span {
   animation: typing 1s steps(8) 1.5s forwards, blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
+  border-right: 3px solid #02ffd7;
   font-family: monospace;
-  font-size: 5em;
+  font-size: 6em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes typing {
