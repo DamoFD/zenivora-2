@@ -14,10 +14,10 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased">
-        <section class="w-full h-screen justify-center items-center flex flex-col" id="hero">
+        <section class="w-full h-screen justify-center items-center flex flex-col overflow-x-hidden" id="hero">
         <canvas class="fixed h-screen w-full bg-[#232323] top-0 left-0" id="canvas"></canvas>
-        <h1 class="z-[2] font-extrabold text-5xl text-blue-300 uppercase">Zenivora</h1>
-        <h3 class="span loader uppercase">
+        <h1 class="z-[2] font-extrabold text-5xl text-blue-300 uppercase typing">Zenivora</h1>
+        <h2 class="span loader uppercase zoom-out">
         <span>R</span>
         <span>e</span>
         <span>n</span>
@@ -40,7 +40,7 @@
         <span>e</span>
         <span>r</span>
         <span>s</span>
-        </h3>
+        </h2>
         </section>
 <script src="{{ asset('js/star-animation.js') }}"></script>
     </body>
