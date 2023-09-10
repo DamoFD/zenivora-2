@@ -2,10 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-VariableFont-wght.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+    font-display: swap;
+}
+
 h2.span {
   font-size: 2vw;
   letter-spacing: 0.1em;
-  font-family: "ROBOTO", sans-serif;
   font-weight: 500;
   color: #faebd7;
   z-index: 4;
@@ -24,7 +35,6 @@ h2.span {
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid #02ffd7;
-  font-family: monospace;
   font-size: 6em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
@@ -34,7 +44,7 @@ h2.span {
     width: 0
   }
   to {
-    width: 8ch;
+    width: 8.2ch;
   }
 }
 

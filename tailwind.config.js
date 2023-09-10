@@ -12,8 +12,14 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                mont: ['Montserrat', ...defaultTheme.fontFamily.sans],
+                roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'brand-gray': '#232323',
+                'brand-primary': '#02ffd7',
+                'brand-secondary': '#ff0266',
+            }
         },
     },
 
