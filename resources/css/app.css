@@ -144,3 +144,79 @@ h2.span {
 .loader span:nth-child(22) {
   -webkit-animation-delay: 4.1s;
 }
+
+.shake {
+    animation-duration: 5s;
+    animation-name: shaker;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shaker {
+  0%, 15%, 100% {
+    transform: rotate(0deg);
+  }
+
+  16% {
+    transform: rotate(1deg);
+  }
+
+  17% {
+    transform: rotate(2deg);
+  }
+
+  18% {
+    transform: rotate(1deg);
+  }
+
+  19% {
+    transform: rotate(0deg);
+  }
+
+  20% {
+    transform: rotate(-1deg);
+  }
+
+  21% {
+    transform: rotate(-2deg);
+  }
+
+  22% {
+    transform: rotate(-1deg);
+  }
+
+  23% {
+    transform: rotate(0deg);
+  }
+
+  24% {
+    transform: rotate(1deg);
+  }
+
+  25% {
+    transform: rotate(2deg);
+  }
+
+  26% {
+    transform: rotate(1deg);
+  }
+
+  27% {
+    transform: rotate(0deg);
+  }
+
+  28% {
+    transform: rotate(-1deg);
+  }
+
+  29% {
+    transform: rotate(-2deg);
+  }
+
+  30% {
+    transform: rotate(-1deg);
+  }
+
+  31% {
+    transform: rotate(0deg);
+  }
+}
