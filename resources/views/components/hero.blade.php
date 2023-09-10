@@ -26,7 +26,7 @@
         <span>s</span>
     </h2>
     <div class="z-[2] mt-16 flex space-x-24">
-        <a class="bg-brand-gray hover:bg-brand-primary hover:text-brand-gray border font-roboto border-brand-primary text-brand-primary text-lg font-extrabold shadow-lg shadow-brand-primary px-12 py-2" href="">Pricing</a>
-        <a href="" class="shake bg-brand-gray hover:bg-brand-primary hover:text-brand-gray border font-roboto border-brand-primary text-brand-primary text-lg font-extrabold shadow-lg shadow-brand-primary px-12 py-2">Contact</a>
+        <x-primary-link href="#">Pricing</x-primary-link>
+        <x-primary-link class="shake" href="#">Contact</x-primary-link>
     </div>
 </section>

@@ -1,4 +1,5 @@
-  const canvas = document.querySelector('canvas'),
+const canvasDots = function () {
+const canvas = document.querySelector('canvas'),
     ctx = canvas.getContext('2d'),
     colorDot = [
       'rgb(81, 162, 233)',
@@ -232,3 +233,5 @@
     canvasDots();
     // console.log(yippe);
   };
+};
+canvasDots();

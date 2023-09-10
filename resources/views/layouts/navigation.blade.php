@@ -62,9 +62,9 @@
                 </x-nav-link>
             @endif
             <li>
-                <x-primary-link href="{{ route('contact') }}" class="font-extrabold">
+                <x-secondary-link href="{{ route('contact') }}" class="font-extrabold">
                     Get Quote
-                </x-primary-link>
+                </x-secondary-link>
             </li>
         </ul>
 
