@@ -6,17 +6,13 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
         <!-- Styles -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="antialiased">
         <section class="w-full h-screen justify-center items-center flex flex-col overflow-x-hidden" id="hero">
         <canvas class="fixed h-screen w-full bg-[#232323] top-0 left-0" id="canvas"></canvas>
-        <h1 class="z-[2] font-extrabold text-5xl text-[#02ffd7] uppercase typing mb-10">Zenivora</h1>
+        <h1 class="z-[2] font-extrabold text-5xl text-[#02ffd7] uppercase typing mb-12">Zenivora</h1>
         <h2 class="span loader uppercase zoom-out">
         <span>R</span>
         <span>e</span>
@@ -41,6 +37,10 @@
         <span>r</span>
         <span>s</span>
         </h2>
+        <div class="z-[2] mt-16 flex space-x-24">
+            <a class="border border-[#02ffd7] text-[#02ffd7] text-lg font-extrabold shadow-lg shadow-[#02ffd7] px-12 py-2" href="">Pricing</a>
+            <a href="" class="border border-[#02ffd7] text-[#02ffd7] text-lg font-extrabold shadow-lg shadow-[#02ffd7] px-12 py-2">Contact</a>
+        </div>
         </section>
 <script src="{{ asset('js/star-animation.js') }}"></script>
     </body>
