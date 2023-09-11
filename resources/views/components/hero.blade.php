@@ -1,5 +1,5 @@
 <section class="w-full h-screen justify-center items-center flex flex-col overflow-x-hidden" id="hero">
-    <canvas class="fixed h-screen w-full bg-brand-gray top-0 left-0" id="canvas"></canvas>
+    <canvas class="absolute h-screen w-full bg-brand-gray top-0 left-0" id="canvas"></canvas>
     <h1 class="z-[2] font-extrabold text-5xl font-mont text-brand-primary uppercase typing mb-12">Zenivora</h1>
     <h2 class="span loader uppercase zoom-out font-roboto">
         <span>R</span>
