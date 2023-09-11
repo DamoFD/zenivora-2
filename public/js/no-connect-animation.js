@@ -35,44 +35,41 @@ const canvasDotsBg = function () {
     };
   } else if (windowSize > 1300) {
     dots = {
-      nb: 75,
+      nb: 100,
       distance: 0,
       d_radius: 0,
       array: [],
     };
   } else if (windowSize > 1100) {
     dots = {
-      nb: 50,
+      nb: 100,
       distance: 0,
       d_radius: 0,
       array: [],
     };
   } else if (windowSize > 800) {
     dots = {
-      nb: 1,
+      nb: 100,
       distance: 0,
       d_radius: 0,
       array: [],
     };
-    ctx.globalAlpha = 0;
   } else if (windowSize > 600) {
     dots = {
-      nb: 1,
+      nb: 100,
       distance: 0,
       d_radius: 0,
       array: [],
     };
 
-    ctx.globalAlpha = 0;
   } else {
     dots = {
-      nb: 1,
+      nb: 100,
       distance: 0,
       d_radius: 0,
       array: [],
     };
 
-    ctx.globalAlpha = 0;
   }
 
   // decided to turn off connecting dots under 1100px
