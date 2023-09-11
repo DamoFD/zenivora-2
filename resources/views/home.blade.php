@@ -2,6 +2,7 @@
     <x-hero />
     <x-about />
     <x-technology />
+    <x-pricing />
     <script src="{{ asset('js/star-animation.js') }}"></script>
     <script src="{{ asset('js/no-connect-animation.js') }}"></script>
     <script src="{{ asset('js/marquee.js') }}"></script>
