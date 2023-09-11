@@ -259,6 +259,14 @@ h2.span {
   display: flex;
   animation: scrolling var(--marquee-animation-duration) linear infinite;
 }
+
+.scrolling {
+    animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+
+.scrolling-reverse {
+    animation: scrolling-reverse var(--marquee-animation-duration) linear infinite;
+}
 /* .marquee-content:hover {
   animation-play-state: paused;
 } */
@@ -266,6 +274,12 @@ h2.span {
   0% { transform: translateX(0); }
   100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
 }
+
+@keyframes scrolling-reverse {
+    0% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+    100% { transform: translateX(0); }
+}
+
 .marquee-content li {
   display: flex;
   justify-content: center;
