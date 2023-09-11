@@ -17,6 +17,7 @@ export default {
             },
             colors: {
                 'brand-gray': '#232323',
+                'brand-gray-secondary': '#2b2b2b',
                 'brand-primary': '#02ffd7',
                 'brand-secondary': '#ff0266',
             }
