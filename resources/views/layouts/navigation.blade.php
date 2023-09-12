@@ -1,4 +1,4 @@
-<header class="bg-brand-gray z-[3] fixed top-0 left-0 w-full" x-data="{ open: false }">
+<header class="bg-brand-gray z-[5] fixed top-0 left-0 w-full" x-data="{ open: false }">
     <nav class="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-22 lg:mt-2">
 
         <a href="{{ route('home') }}">
@@ -69,7 +69,7 @@
         </ul>
 
         <!-- Hamburger -->
-        <button id="mobile-nav" aria-label="mobile-nav" @click="open = ! open" class="inline-flex sm:hidden items-center justify-center p-2 rounded-md text-brand-gray">
+        <button id="mobile-nav" aria-label="mobile-nav" @click="open = ! open" class="inline-flex sm:hidden items-center justify-center p-2 rounded-md text-white">
             <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -81,9 +81,9 @@
     <nav :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden w-full">
         <ul class="pt-2 pb-3 space-y-1 w-full">
             <li class="w-full flex justify-center">
-                <x-primary-link href="{{ route('contact') }}" class="font-extrabold">
+                <x-secondary-link href="{{ route('contact') }}" class="font-extrabold">
                     Get Quote
-                </x-primary-link>
+                </x-secondary-link>
             </li>
             @if (Auth::user())
                 <li>

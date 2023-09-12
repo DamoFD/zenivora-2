@@ -1,6 +1,6 @@
-<section class="w-full h-screen flex justify-center items-center flex-col" id="technology">
+<section class="w-full min-h-screen flex justify-center items-center flex-col" id="technology">
     <h2 class="text-white text-3xl font-mont font-extrabold text-center">Let's talk about <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">your business</strong></h2>
-    <div class="flex w-1/2 mt-10 justify-between">
+    <div class="flex flex-col lg:flex-row w-1/2 mt-10 justify-between">
         <form class="flex flex-col border border-brand-primary rounded-lg p-10 w-1/2">
             <h3 class="text-white text-xl font-mont font-extrabold text-center">What Are Your Goals?</h3>
             <label class="text-white font-roboto mt-4 font-bold" for="email">Email*</label>
