@@ -1,6 +1,6 @@
 <section class="w-full h-screen flex justify-center items-center flex-col" id="security">
         <h2 class="text-white text-3xl font-mont font-extrabold text-center">Enterprise-class <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">security</strong></h2>
-        <div class="flex justify-between w-3/4 mt-10">
+        <div class="grid grid-cols-2 gap-10 w-3/4 mt-10">
             <div>
                 <h3 class="text-white text-xl font-mont font-extrabold">Why does security matter?</h3>
                 <p class="text-white text-xl font-mont font-extrabold">Security is important from a legal and moral standpoint.</p>
@@ -20,7 +20,7 @@
                 <p class="text-white text-xl font-mont font-extrabold my-10">Here is a visual representation of <a class="text-brand-primary underline" href="https://threatmap.checkpoint.com/">real-time cyberattacks</a></p>
                 <x-primary-link>Contact</x-primary-link>
             </div>
-            <div class="w-1/2">
+            <div>
                 <img class="rounded-lg" src="{{ asset('img/arch-rice.png') }}" alt="Arch Linux Security Practices">
             </div>
         </div>

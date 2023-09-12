@@ -1,6 +1,6 @@
 <section class="w-full h-screen flex justify-center items-center flex-col" id="technology">
         <h2 class="text-white text-3xl font-mont font-extrabold text-center">Industry leading <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">performance</strong></h2>
-        <div class="flex justify-between w-3/4 mt-10">
+        <div class="grid grid-cols-2 gap-10 w-3/4 mt-10">
             <div>
                 <h3 class="text-white text-xl font-mont font-extrabold">Do you choose between beautiful site, or good performance?</h3>
                 <p class="text-white text-xl font-mont font-extrabold">You can have both!</p>

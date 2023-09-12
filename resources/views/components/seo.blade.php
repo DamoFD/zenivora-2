@@ -1,8 +1,8 @@
 <section class="w-full h-screen flex justify-center items-center flex-col" id="seo">
         <h2 class="text-white text-3xl font-mont font-extrabold text-center">Proven <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">competitive SEO</strong> practices</h2>
-        <div class="flex justify-between w-3/4 mt-10">
+        <div class="grid grid-cols-2 w-3/4 mt-10 gap-10">
             <div>
-                <img class="rounded-lg w-3/4" src="{{ asset('img/discordbrowser-stats.png') }}" alt="discordbrowser pagespeed insights">
+                <img class="rounded-lg mx-auto" src="{{ asset('img/discordbrowser-stats.png') }}" alt="discordbrowser pagespeed insights">
             </div>
             <div>
                 <h3 class="text-white text-xl font-mont font-extrabold">8.5 billion searches take place on Google every day.</h3>
