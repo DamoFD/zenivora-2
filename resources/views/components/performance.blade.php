@@ -18,10 +18,11 @@
                     <li class="text-white font-roboto">Even our massive sites filled to the brim with functionality load instantly.</li>
                 </ul>
                 <p class="text-white text-xl font-mont font-extrabold mt-10">Here is our benchmark for the <a class="text-brand-primary underline" href="https://discordbrowser.com">DiscordBrowser.</a></p>
-                <p class="text-white text-xl font-mont font-extrabold mt-2">Check the benchmark for your site at <a class="text-brand-primary underline" href="https://pagespeed.web.dev/">Google's Pagespeed Insights.</a></p>
+                <p class="text-white text-xl font-mont font-extrabold mt-2 mb-5">Check the benchmark for your site at <a class="text-brand-primary underline" href="https://pagespeed.web.dev/">Google's Pagespeed Insights.</a></p>
+                <x-primary-link>Get Quote</x-primary-link>
             </div>
             <div>
-                <img src="{{ asset('img/website-pagespeed-score.png') }}" alt="discordbrowser pagespeed insights">
+                <img class="rounded-lg" src="{{ asset('img/website-pagespeed-score.png') }}" alt="discordbrowser pagespeed insights">
             </div>
         </div>
 </section>
