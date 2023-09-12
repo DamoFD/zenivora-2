@@ -1,4 +1,4 @@
-<section class="w-full h-screen flex justify-center items-center flex-col" id="technology">
+<section class="w-full h-screen flex justify-center items-center flex-col" id="seo">
         <h2 class="text-white text-3xl font-mont font-extrabold text-center">Proven <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">competitive SEO</strong> practices</h2>
         <div class="flex justify-between w-3/4 mt-10">
             <div>

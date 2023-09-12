@@ -4,6 +4,7 @@
     <x-technology />
     <x-performance />
     <x-seo />
+    <x-security />
     <x-pricing />
     <x-contact />
     <script src="{{ asset('js/star-animation.js') }}"></script>
