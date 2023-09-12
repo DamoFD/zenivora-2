@@ -241,15 +241,15 @@ h2.span {
   --marquee-animation-duration: calc(var(--marquee-elements) * 6s);
 }
 
-@media screen and (max-width: 720px) {
-    :root {
-        --marquee-width: 100%;
-    }
-}
-
 @media screen and (max-width: 1000px) {
     :root {
         --marquee-width: 75%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    :root {
+        --marquee-width: 100%;
     }
 }
 
