@@ -44,7 +44,7 @@
                 <li>Live Chat Integration</li>
                 <li>1 Year Hosting & Security</li>
             </ul>
-            <x-gradient-link class="mx-auto">Get Quote</x-primary-link>
+            <x-gradient-link class="mx-auto shake">Get Quote</x-primary-link>
         </div>
         <div class="bg-brand-gray flex flex-col border border-brand-primary rounded-lg p-6 w-1/4">
             <h3 class="text-white text-2xl font-mont font-extrabold uppercase">Enterprise</h3>
