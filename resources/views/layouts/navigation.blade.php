@@ -9,21 +9,18 @@
             <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 {{ __('Home') }}
             </x-nav-link>
-            <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+            <x-nav-link href="#about">
                 {{ __('About') }}
             </x-nav-link>
-            <x-nav-link :href="route('locations')" :active="request()->routeIs('locations')">
-                {{ __('Locations') }}
-            </x-nav-link>
-            <x-nav-link :href="route('pricing')" :active="request()->routeIs('pricing')">
+            <x-nav-link href="#pricing">
                 {{ __('Pricing') }}
             </x-nav-link>
-            <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+            <x-nav-link href="#contact">
                 {{ __('Contact') }}
             </x-nav-link>
 
             <!-- Settings Dropdown -->
-            @if (Auth::user())
+            {{--@if (Auth::user())
                 <li class="hidden sm:flex sm:items-center sm:ml-6">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
@@ -61,8 +58,8 @@
                     {{ __('Login') }}
                 </x-nav-link>
             @endif
-            <li>
-                <x-secondary-link href="{{ route('contact') }}" class="font-extrabold">
+            <li>--}}
+                <x-secondary-link href="#contact" class="font-extrabold">
                     Get Quote
                 </x-secondary-link>
             </li>
@@ -81,7 +78,7 @@
     <nav :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden w-full">
         <ul class="pt-2 pb-3 space-y-1 w-full">
             <li class="w-full flex justify-center">
-                <x-secondary-link href="{{ route('contact') }}" class="font-extrabold">
+                <x-secondary-link href="#contact" class="font-extrabold">
                     Get Quote
                 </x-secondary-link>
             </li>
@@ -106,25 +103,22 @@
                 </li>
             @endif
 
-            @if (Auth::user())
+            {{--@if (Auth::user())
                 <x-responsive-nav-link rel="nofollow" :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                     {{ __('Dashboard') }}
                 </x-responsive-nav-link>
-            @endif
+            @endif--}}
 
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 {{ __('Home') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('about')" :active="request()->routeIs('about')">
+            <x-responsive-nav-link href="#about">
                 {{ __('About') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('locations')" :active="request()->routeIs('locations')">
-                {{ __('Locations') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('pricing')" :active="request()->routeIs('pricing')">
+            <x-responsive-nav-link href="#pricing">
                 {{ __('Pricing')}}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+            <x-responsive-nav-link href="#contact">
                 {{ __('Contact') }}
             </x-responsive-nav-link>
 
@@ -147,10 +141,10 @@
                             " type="submit">Log Out</button>
                     </form>
                 </li>
-            @else
+           {{-- @else
                 <x-responsive-nav-link rel="nofollow" :href="route('login')">
                     {{ __('Login') }}
-                </x-responsive-nav-link>
+                </x-responsive-nav-link>--}}
             @endif
         </ul>
 

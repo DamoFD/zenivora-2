@@ -1,4 +1,4 @@
-<section class="w-full min-h-screen flex justify-center items-center flex-col mt-56 lg:mt-0" id="technology">
+<section class="w-full min-h-screen flex justify-center items-center flex-col mt-56 lg:mt-0" id="contact">
     <h2 class="text-white text-3xl font-mont font-extrabold text-center">Let's talk about <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">your business</strong></h2>
     <div class="flex flex-col lg:flex-row w-11/12 lg:w-1/2 mt-10 items-center space-y-10 lg:space-y-0 lg:justify-between">
         <form class="flex flex-col border border-brand-primary rounded-lg p-10 w-full lg:w-1/2">
@@ -33,5 +33,5 @@
             </div>
         </div>
     </div>
-    <div id="map" class="w-1/2 h-72 rounded-lg mt-10"></div>
+    <div id="map" class="w-11/12 lg:w-1/2 h-72 rounded-lg mt-10"></div>
 </section>

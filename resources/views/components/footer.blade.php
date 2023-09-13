@@ -55,22 +55,17 @@
                 </a>
             </li>
             <li>
-                <a class="text-white underline font-bold font-roboto" href="/about">
+                <a class="text-white underline font-bold font-roboto" href="#about">
                     About
                 </a>
             </li>
             <li>
-                <a class="text-white underline font-bold font-roboto" href="/locations">
-                    Locations
-                </a>
-            </li>
-            <li>
-                <a class="text-white underline font-bold font-roboto" href="/Pricing">
+                <a class="text-white underline font-bold font-roboto" href="#pricing">
                     Pricing
                 </a>
             </li>
             <li>
-                <a class="text-white underline font-bold font-roboto" href="/Contact">
+                <a class="text-white underline font-bold font-roboto" href="#contact">
                     Contact
                 </a>
             </li>

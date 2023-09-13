@@ -26,7 +26,7 @@
         <span>s</span>
     </h2>
     <div class="z-[2] mt-16 flex space-x-4 md:space-x-24">
-        <x-primary-link href="#">Pricing</x-primary-link>
-        <x-primary-link class="shake" href="#">Contact</x-primary-link>
+        <x-primary-link href="#pricing">Pricing</x-primary-link>
+        <x-primary-link class="shake" href="#contact">Contact</x-primary-link>
     </div>
 </section>
