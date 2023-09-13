@@ -17,8 +17,8 @@
                     <li class="text-white font-roboto">There are 2,200 successful cyberattacks per day</li>
                     <li class="text-white font-roboto">95% of cyberattacks are due to human error</li>
                 </ul>
-                <p class="text-white text-lg lg:text-xl font-mont font-extrabold my-10">Here is a visual representation of <a class="text-brand-primary underline" href="https://threatmap.checkpoint.com/">real-time cyberattacks</a></p>
-                <x-primary-link>Contact</x-primary-link>
+                <p class="text-white text-lg lg:text-xl font-mont font-extrabold my-10">Here is a visual representation of <a target="_blank" class="text-brand-primary underline" href="https://threatmap.checkpoint.com/">real-time cyberattacks</a></p>
+                <x-primary-link href="#contact">Contact</x-primary-link>
             </div>
             <div>
                 <img class="rounded-lg" src="{{ asset('img/arch-rice.png') }}" alt="Arch Linux Security Practices">

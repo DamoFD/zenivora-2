@@ -8,8 +8,8 @@
                 <h3 class="text-white text-lg lg:text-xl font-mont font-extrabold">8.5 billion searches take place on Google every day.</h3>
                 <p class="text-white text-lg lg:text-xl font-mont font-extrabold">We know what your customers are searching.</p>
                 <ul class="list-disc list-inside flex flex-col space-y-2 mt-2">
-                    <li class="text-white font-roboto">Keyword research with <a class="text-brand-primary underline" href="https://ahrefs.com">ahrefs</a></li>
-                    <li class="text-white font-roboto">Original copy with <a class="text-brand-primary underline" href="https://surferseo.com">Surfer SEO</a></li>
+                    <li class="text-white font-roboto">Keyword research with <a target="_blank" class="text-brand-primary underline" href="https://ahrefs.com">ahrefs</a></li>
+                    <li class="text-white font-roboto">Original copy with <a target="_blank" class="text-brand-primary underline" href="https://surferseo.com">Surfer SEO</a></li>
                     <li class="text-white font-roboto">Modern backlink building techniques</li>
                     <li class="text-white font-roboto">Accessibility and translations</li>
                 </ul>
@@ -21,7 +21,7 @@
                     <li class="text-white font-roboto">Google drives 8 times more traffic than all social media combined</li>
                 </ul>
                 <p class="text-white text-lg lg:text-xl font-mont font-extrabold mt-10">Here is our traffic for the DiscordBrowser after implementing our SEO techniques.</p>
-                <p class="text-white text-lg lg:text-xl font-mont font-extrabold mt-2">Check your backlink profile with <a href="https://ahrefs.com/backlink-checker" class="text-brand-primary underline">ahrefs</a></p>
+                <p class="text-white text-lg lg:text-xl font-mont font-extrabold mt-2">Check your backlink profile with <a target="_blank" href="https://ahrefs.com/backlink-checker" class="text-brand-primary underline">ahrefs</a></p>
             </div>
         </div>
 </section>
