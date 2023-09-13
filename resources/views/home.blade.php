@@ -1,4 +1,6 @@
 <x-app-layout>
+    @section('title', 'Unlock Your Brand\'s Potential With Reno Website Designers')
+    @section('description', 'Elevate your brand with Zenivora, the leading Reno Website Designers. Expertise in responsive design, SEO, and e-commerce solutions. Based in Reno, NV.')
     <x-hero />
     <x-about />
     <x-technology />
