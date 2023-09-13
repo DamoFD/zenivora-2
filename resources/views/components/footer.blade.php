@@ -39,7 +39,9 @@
                 </a>
             </li>
             <li>
-                <img class="w-6" src="{{ asset('svg/nextdoor.svg') }}" alt="nextdoor icon">
+                <a href="https://nextdoor.com/pages/zenivora-reno-nv/">
+                    <img class="w-6" src="{{ asset('svg/nextdoor.svg') }}" alt="nextdoor icon">
+                </a>
             </li>
             <li>
                 <img class="w-6" src="{{ asset('svg/pinterest.svg') }}" alt="pinterest icon">
