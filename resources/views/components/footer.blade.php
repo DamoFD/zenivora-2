@@ -16,7 +16,9 @@
                 <img class="w-6" src="{{ asset('svg/tiktok.svg') }}" alt="tiktok icon">
             </li>
             <li>
-                <img class="w-6" src="{{ asset('svg/instagram.svg') }}" alt="instagram icon">
+                <a href="https://www.instagram.com/zenivora.official/">
+                    <img class="w-6" src="{{ asset('svg/instagram.svg') }}" alt="instagram icon">
+                </a>
             </li>
             <li>
                 <a href="https://www.linkedin.com/company/zenivora/">
