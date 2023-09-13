@@ -3,48 +3,49 @@
     <nav class="flex flex-col items-center w-11/12 lg:w-1/2 mt-6">
         <ul class="flex items-center space-x-4 lg:space-x-6 mb-6">
             <li>
-                <a href="https://www.facebook.com/Zenivora.Official">
+                <a target="_blank" href="https://www.facebook.com/Zenivora.Official">
                     <img class="w-6" src="{{ asset('svg/facebook.svg') }}" alt="facebook icon">
                 </a>
             </li>
             <li>
-                <a href="https://www.reddit.com/r/zenivora/">
+                <a target="_blank" href="https://www.reddit.com/r/zenivora/">
                     <img class="w-6" src="{{ asset('svg/reddit.svg') }}" alt="reddit icon">
                 </a>
             </li>
             <li>
-                <img class="w-6" src="{{ asset('svg/tiktok.svg') }}" alt="tiktok icon">
+                <a target="_blank" href="https://www.tiktok.com/@zenivora/">
+                    <img class="w-6" src="{{ asset('svg/tiktok.svg') }}" alt="tiktok icon">
+                </a>
             </li>
             <li>
-                <a href="https://www.instagram.com/zenivora.official/">
+                <a target="_blank" href="https://www.instagram.com/zenivora.official/">
                     <img class="w-6" src="{{ asset('svg/instagram.svg') }}" alt="instagram icon">
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/company/zenivora/">
+                <a target="_blank" href="https://www.linkedin.com/company/zenivora/">
                     <img class="w-6" src="{{ asset('svg/linkedin.svg') }}" alt="linkedin icon">
                 </a>
             </li>
             <li>
-                <a href="https://www.youtube.com/@Zenivora">
+                <a target="_blank" href="https://www.youtube.com/@Zenivora">
                     <img class="w-6" src="{{ asset('svg/youtube.svg') }}" alt="youtube icon">
                 </a>
             </li>
             <li>
-                <img class="w-6" src="{{ asset('svg/x.svg') }}" alt="x icon">
-            </li>
-            <li>
-                <a href="https://www.threads.net/@zenivora.official/">
+                <a target="_blank" href="https://www.threads.net/@zenivora.official/">
                     <img class="w-6" src="{{ asset('svg/threads.svg') }}" alt="threads icon">
                 </a>
             </li>
             <li>
-                <a href="https://nextdoor.com/pages/zenivora-reno-nv/">
+                <a target="_blank" href="https://nextdoor.com/pages/zenivora-reno-nv/">
                     <img class="w-6" src="{{ asset('svg/nextdoor.svg') }}" alt="nextdoor icon">
                 </a>
             </li>
             <li>
-                <img class="w-6" src="{{ asset('svg/pinterest.svg') }}" alt="pinterest icon">
+                <a target="_blank" href="https://www.pinterst.com/zenivora/">
+                    <img class="w-6" src="{{ asset('svg/pinterest.svg') }}" alt="pinterest icon">
+                </a>
             </li>
         </ul>
         <ul class="flex space-x-4 lg:space-x-10">
