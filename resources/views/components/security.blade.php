@@ -21,7 +21,15 @@
                 <x-primary-link href="#contact">Contact</x-primary-link>
             </div>
             <div>
-                <img class="rounded-lg" src="{{ asset('img/arch-rice.png') }}" alt="Arch Linux Security Practices">
+                <img
+                    class="rounded-lg"
+                    sizes="(max-width: 700px) 700px, 1024px"
+                    srcset="{{ asset('img/arch-rice-mobile.webp') }} 700w,
+                            {{ asset('img/arch-rice-desktop.webp') }} 1024w"
+                    src="{{ asset('img/arch-rice-desktop.webp') }}"
+                    alt="Arch Linux Security Practices"
+                    loading="lazy"
+                >
             </div>
         </div>
 </section>
