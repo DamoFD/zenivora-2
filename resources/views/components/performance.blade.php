@@ -22,7 +22,15 @@
                 <x-primary-link href="#contact">Get Quote</x-primary-link>
             </div>
             <div>
-                <img class="rounded-lg" src="{{ asset('img/website-pagespeed-score.png') }}" alt="discordbrowser pagespeed insights">
+                <img
+                    class="rounded-lg"
+                    sizes="(max-width: 700px) 700px, 1024px"
+                    srcset="{{ asset('img/website-pagespeed-score-mobile.webp') }} 700w,
+                            {{ asset('img/website-pagespeed-score-desktop.webp') }} 1024w"
+                    src="{{ asset('img/website-pagespeed-score-desktop.webp') }}"
+                    alt="discordbrwser pagespeed insights"
+                    loading="lazy"
+                >
             </div>
         </div>
 </section>

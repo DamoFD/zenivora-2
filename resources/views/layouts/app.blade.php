@@ -42,9 +42,11 @@
         <link rel="shortcut icon" href="{{ asset('img/zenivora-logo.webp') }}">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <link defer rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
+
+        <link rel="stylesheet" href="{{ asset('build/assets/app-354d9b1c.css') }}" />
+    <script defer src="{{ asset('build/assets/app-6e0eadfb.js') }}"></script>
+        <link rel="preload" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" as="style" />
     </head>
     <body class="antialiased">
         @include('layouts.navigation')
@@ -53,16 +55,8 @@
             {{ $slot }}
         </main>
         <x-footer />
-        <script>
-            var map = L.map('map').setView([39.5527725, -119.7954097], 15);
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '© OpenStreetMap contributors'
-            }).addTo(map);
-
-            var marker = L.marker([39.5527725, -119.7954097]).addTo(map);
-
-            marker.bindPopup("<b>Zenivora</b><br>2390 Tripp Dr #2<br>Reno, NV 89512").openPopup();
+        <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script defer src="{{ asset('js/leaflet.js') }}">
         </script>
     </body>
 </html>

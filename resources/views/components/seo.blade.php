@@ -2,7 +2,15 @@
         <h2 class="text-white text-3xl font-mont w-11/12 lg:w-full font-extrabold text-center">Proven <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">competitive SEO</strong> practices</h2>
         <div class="grid grid-cols-1 lg:grid-cols-2 w-11/12 lg:w-3/4 mt-10 gap-10">
             <div>
-                <img class="rounded-lg mx-auto" src="{{ asset('img/discordbrowser-stats.png') }}" alt="discordbrowser pagespeed insights">
+                <img
+                    class="rounded-lg"
+                    sizes="(max-width: 700px) 700px, 1024px"
+                    srcset="{{ asset('img/discordbrowser-stats-mobile.webp') }} 700w,
+                            {{ asset('img/discordbrowser-stats-desktop.webp') }} 1024w"
+                    src="{{ asset('img/discordbrowser-stats-desktop.webp') }}"
+                    alt="discordbrowser stats"
+                    loading="lazy"
+                >
             </div>
             <div>
                 <h3 class="text-white text-lg lg:text-xl font-mont font-extrabold">8.5 billion searches take place on Google every day.</h3>
