@@ -1,8 +1,14 @@
 <x-app-layout>
+    @section('title', 'Unlock Your Brand\'s Potential With Reno Website Designers')
+    @section('description', 'Elevate your brand with Zenivora, the leading Reno Website Designers. Expertise in responsive design, SEO, and e-commerce solutions. Based in Reno, NV.')
     <x-hero />
     <x-about />
     <x-technology />
+    <x-performance />
+    <x-seo />
+    <x-security />
     <x-pricing />
+    <x-contact />
     <script src="{{ asset('js/star-animation.js') }}"></script>
     <script src="{{ asset('js/no-connect-animation.js') }}"></script>
     <script src="{{ asset('js/marquee.js') }}"></script>

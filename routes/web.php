@@ -1,7 +1,10 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+// use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\EmailController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Response;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +21,15 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::post('/email', [EmailController::class, 'sendEmail'])->name('email');
+
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.index');
+Route::get('/sitemap/pages.xml', function () {
+    $content = view('sitemap.pages.index')->render();
+    return response($content, Response::HTTP_OK)->header('Content-Type', 'text/xml');
+})->name('sitemap.pages.index');
+
+/*
 Route::get('/about', function () {
     return view('about');
 })->name('about');
@@ -45,3 +57,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+*/

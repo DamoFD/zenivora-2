@@ -1,6 +1,6 @@
-<section class="w-full h-screen flex justify-center items-center flex-col" id="technology">
-    <h2 class="text-white text-3xl font-mont font-extrabold">Harness the power of <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">next-gen</strong> website technology</h2>
-    <div class="grid w-3/4 grid-cols-3 gap-6 mt-10">
+<section class="w-full min-h-screen flex justify-center items-center flex-col mt-56 lg:mt-0" id="technology">
+    <h2 class="text-white text-center text-3xl font-mont font-extrabold">Harness the power of <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">next-gen</strong> website technology</h2>
+    <div class="grid w-11/12 lg:w-3/4 grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
         <x-gradient-border-card>
             <img class="w-12 h-12 mb-4 self-center" src="{{ asset('svg/marker.svg') }}" alt="location marker" />
             <h3 class="text-white text-xl font-mont font-extrabold text-center">Located in Reno, NV</h3>

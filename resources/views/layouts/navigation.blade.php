@@ -1,4 +1,4 @@
-<header class="bg-brand-gray z-[3] fixed top-0 left-0 w-full" x-data="{ open: false }">
+<header class="bg-brand-gray z-[5] fixed top-0 left-0 w-full" x-data="{ open: false }">
     <nav class="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-22 lg:mt-2">
 
         <a href="{{ route('home') }}">
@@ -9,21 +9,18 @@
             <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 {{ __('Home') }}
             </x-nav-link>
-            <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+            <x-nav-link href="#about">
                 {{ __('About') }}
             </x-nav-link>
-            <x-nav-link :href="route('locations')" :active="request()->routeIs('locations')">
-                {{ __('Locations') }}
-            </x-nav-link>
-            <x-nav-link :href="route('pricing')" :active="request()->routeIs('pricing')">
+            <x-nav-link href="#pricing">
                 {{ __('Pricing') }}
             </x-nav-link>
-            <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+            <x-nav-link href="#contact">
                 {{ __('Contact') }}
             </x-nav-link>
 
             <!-- Settings Dropdown -->
-            @if (Auth::user())
+            {{--@if (Auth::user())
                 <li class="hidden sm:flex sm:items-center sm:ml-6">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
@@ -61,15 +58,15 @@
                     {{ __('Login') }}
                 </x-nav-link>
             @endif
-            <li>
-                <x-secondary-link href="{{ route('contact') }}" class="font-extrabold">
+            <li>--}}
+                <x-secondary-link href="#contact" class="font-extrabold">
                     Get Quote
                 </x-secondary-link>
             </li>
         </ul>
 
         <!-- Hamburger -->
-        <button id="mobile-nav" aria-label="mobile-nav" @click="open = ! open" class="inline-flex sm:hidden items-center justify-center p-2 rounded-md text-brand-gray">
+        <button id="mobile-nav" aria-label="mobile-nav" @click="open = ! open" class="inline-flex sm:hidden items-center justify-center p-2 rounded-md text-white">
             <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -81,9 +78,9 @@
     <nav :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden w-full">
         <ul class="pt-2 pb-3 space-y-1 w-full">
             <li class="w-full flex justify-center">
-                <x-primary-link href="{{ route('contact') }}" class="font-extrabold">
+                <x-secondary-link href="#contact" class="font-extrabold">
                     Get Quote
-                </x-primary-link>
+                </x-secondary-link>
             </li>
             @if (Auth::user())
                 <li>
@@ -106,25 +103,22 @@
                 </li>
             @endif
 
-            @if (Auth::user())
+            {{--@if (Auth::user())
                 <x-responsive-nav-link rel="nofollow" :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                     {{ __('Dashboard') }}
                 </x-responsive-nav-link>
-            @endif
+            @endif--}}
 
             <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 {{ __('Home') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('about')" :active="request()->routeIs('about')">
+            <x-responsive-nav-link href="#about">
                 {{ __('About') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('locations')" :active="request()->routeIs('locations')">
-                {{ __('Locations') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('pricing')" :active="request()->routeIs('pricing')">
+            <x-responsive-nav-link href="#pricing">
                 {{ __('Pricing')}}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+            <x-responsive-nav-link href="#contact">
                 {{ __('Contact') }}
             </x-responsive-nav-link>
 
@@ -147,10 +141,10 @@
                             " type="submit">Log Out</button>
                     </form>
                 </li>
-            @else
+           {{-- @else
                 <x-responsive-nav-link rel="nofollow" :href="route('login')">
                     {{ __('Login') }}
-                </x-responsive-nav-link>
+                </x-responsive-nav-link>--}}
             @endif
         </ul>
 

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Montserrat';
     src: url('../fonts/Montserrat.ttf');
@@ -22,6 +26,18 @@ h2.span {
   z-index: 4;
 }
 
+@media screen and (max-width: 1000px) {
+    h2.span {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 705px) {
+    h2.span {
+        font-size: 1em;
+    }
+}
+
 .loader span {
   color: #faebd7;
   text-shadow: 0 0 0 #faebd7;
@@ -35,7 +51,6 @@ h2.span {
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid #02ffd7;
-  font-size: 6em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -228,6 +243,18 @@ h2.span {
   --marquee-elements-displayed: 3;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed) * 3);
   --marquee-animation-duration: calc(var(--marquee-elements) * 6s);
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --marquee-width: 75%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    :root {
+        --marquee-width: 100%;
+    }
 }
 
 .marquee {
