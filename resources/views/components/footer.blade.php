@@ -26,7 +26,7 @@
                 </a>
             </li>
             <li>
-                <a href="https://www.youtube.com/channel/UCdKQEqQTMbGsCxPYcFbYkeA">
+                <a href="https://www.youtube.com/@Zenivora">
                     <img class="w-6" src="{{ asset('svg/youtube.svg') }}" alt="youtube icon">
                 </a>
             </li>
@@ -34,7 +34,9 @@
                 <img class="w-6" src="{{ asset('svg/x.svg') }}" alt="x icon">
             </li>
             <li>
-                <img class="w-6" src="{{ asset('svg/threads.svg') }}" alt="threads icon">
+                <a href="https://www.threads.net/@zenivora.official/">
+                    <img class="w-6" src="{{ asset('svg/threads.svg') }}" alt="threads icon">
+                </a>
             </li>
             <li>
                 <img class="w-6" src="{{ asset('svg/nextdoor.svg') }}" alt="nextdoor icon">
