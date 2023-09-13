@@ -9,6 +9,8 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link defer rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     </head>
     <body class="antialiased">
         @include('layouts.navigation')
@@ -17,5 +19,16 @@
             {{ $slot }}
         </main>
         <x-footer />
+        <script>
+            var map = L.map('map').setView([39.5527725, -119.7954097], 15);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            var marker = L.marker([39.5527725, -119.7954097]).addTo(map);
+
+            marker.bindPopup("<b>Zenivora</b><br>2390 Tripp Dr #2<br>Reno, NV 89512").openPopup();
+        </script>
     </body>
 </html>

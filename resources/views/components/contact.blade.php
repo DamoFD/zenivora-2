@@ -33,4 +33,5 @@
             </a>
         </div>
     </div>
+    <div id="map" class="w-1/2 h-72 rounded-lg mt-10"></div>
 </section>
