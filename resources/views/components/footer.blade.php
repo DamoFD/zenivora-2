@@ -26,7 +26,9 @@
                 </a>
             </li>
             <li>
-                <img class="w-6" src="{{ asset('svg/youtube.svg') }}" alt="youtube icon">
+                <a href="https://www.youtube.com/channel/UCdKQEqQTMbGsCxPYcFbYkeA">
+                    <img class="w-6" src="{{ asset('svg/youtube.svg') }}" alt="youtube icon">
+                </a>
             </li>
             <li>
                 <img class="w-6" src="{{ asset('svg/x.svg') }}" alt="x icon">
