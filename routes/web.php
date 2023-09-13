@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
+// use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\EmailController;;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,6 +19,9 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::post('/email', [EmailController::class, 'sendEmail'])->name('email');
+
+/*
 Route::get('/about', function () {
     return view('about');
 })->name('about');
@@ -45,3 +49,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+*/
