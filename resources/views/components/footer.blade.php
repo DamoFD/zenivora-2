@@ -3,10 +3,14 @@
     <nav class="flex flex-col items-center w-11/12 lg:w-1/2 mt-6">
         <ul class="flex items-center space-x-4 lg:space-x-6 mb-6">
             <li>
-                <img class="w-6" src="{{ asset('svg/facebook.svg') }}" alt="facebook icon">
+                <a href="https://www.facebook.com/Zenivora.Official">
+                    <img class="w-6" src="{{ asset('svg/facebook.svg') }}" alt="facebook icon">
+                </a>
             </li>
             <li>
-                <img class="w-6" src="{{ asset('svg/reddit.svg') }}" alt="reddit icon">
+                <a href="https://www.reddit.com/r/zenivora/">
+                    <img class="w-6" src="{{ asset('svg/reddit.svg') }}" alt="reddit icon">
+                </a>
             </li>
             <li>
                 <img class="w-6" src="{{ asset('svg/tiktok.svg') }}" alt="tiktok icon">
@@ -15,7 +19,9 @@
                 <img class="w-6" src="{{ asset('svg/instagram.svg') }}" alt="instagram icon">
             </li>
             <li>
-                <img class="w-6" src="{{ asset('svg/linkedin.svg') }}" alt="linkedin icon">
+                <a href="https://www.linkedin.com/company/zenivora/">
+                    <img class="w-6" src="{{ asset('svg/linkedin.svg') }}" alt="linkedin icon">
+                </a>
             </li>
             <li>
                 <img class="w-6" src="{{ asset('svg/youtube.svg') }}" alt="youtube icon">
