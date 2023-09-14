@@ -47,4 +47,6 @@
         </div>
     </div>
     <div id="map" class="w-11/12 lg:w-1/2 h-72 rounded-lg mt-10"></div>
+        <script src="{{ asset('js/leaflet.js') }}">
+        </script>
 </section>
