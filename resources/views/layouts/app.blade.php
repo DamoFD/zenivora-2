@@ -37,16 +37,15 @@
 
           gtag('config', 'G-5TPQGC9VFQ');
         </script>
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
         <meta name="description" content="@yield('description', 'Welcome to Zenivora!')" />
         <link rel="icon" href="{{ asset('img/zenivora-logo.webp') }}" type="image/webp">
         <link rel="shortcut icon" href="{{ asset('img/zenivora-logo.webp') }}">
 
         <!-- Scripts -->
-        <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        <link rel="stylesheet" href="{{ asset('build/assets/app-354d9b1c.css') }}" />
-    <script defer src="{{ asset('build/assets/app-6e0eadfb.js') }}"></script>
-        <link rel="preload" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" as="style" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     </head>
     <body class="antialiased">
         @include('layouts.navigation')
@@ -55,8 +54,5 @@
             {{ $slot }}
         </main>
         <x-footer />
-        <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-        <script defer src="{{ asset('js/leaflet.js') }}">
-        </script>
     </body>
 </html>
