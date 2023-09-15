@@ -3,6 +3,7 @@
 // use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\LocationController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Response;
 
@@ -20,6 +21,8 @@ use Illuminate\Http\Response;
 Route::get('/', function () {
     return view('home');
 })->name('home');
+
+Route::get('/{location}', [LocationController::class, 'show'])->name('location.show');
 
 Route::post('/email', [EmailController::class, 'sendEmail'])->name('email');
 

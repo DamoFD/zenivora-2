@@ -1,9 +1,14 @@
 <section class="w-full min-h-screen flex justify-center items-center flex-col mt-56 lg:mt-0" id="technology">
     <h2 class="text-white text-center text-3xl font-mont font-extrabold">Harness the power of <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">next-gen</strong> website technology</h2>
     <div class="grid w-11/12 lg:w-3/4 grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
-        <x-gradient-border-card>
-            <img class="w-12 h-12 mb-4 self-center" src="{{ asset('svg/marker.svg') }}" alt="location marker" />
-            <h3 class="text-white text-xl font-mont font-extrabold text-center">Located in Reno, NV</h3>
+        @foreach ($technologies as $technology)
+            <x-gradient-border-card :img="$technology->img" :title="$technology->title"></x-gradient-border-card>
+        @endforeach
+    <div class="grid w-11/12 lg:w-3/4 grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
+        <x-gradient-border-card
+            img="marker.svg"
+            title="Located in Reno, NV"
+        >
             <p class="text-white text-lg font-roboto mt-4">You may have noticed how hard it is to find software engineers that are <em>actually</em> located in the Reno area.</p>
             <p class="text-white text-lg font-roboto mt-4">Zenivora is a <strong>local</strong> business here in Reno, NV!</p>
             <ul class="list-disc">
@@ -12,9 +17,10 @@
                 <li class="text-white text-lg font-roboto mt-4">Local Reno, NV business that contributes to massive codebases including the <a class="text-brand-primary underline" href="https://wordpress.org">Wordpress Core</a> and the <a class="text-brand-primary underline" href="https://phpmyadmin.net">PhpMyAdmin database interface</a>.</li>
             </ul>
         </x-gradient-border-card>
-        <x-gradient-border-card>
-            <img class="w-12 h-12 mb-4 self-center" src="{{ asset('svg/seo.svg') }}" alt="seo icon" />
-            <h3 class="text-white text-xl font-mont font-extrabold text-center">Rank #1 on Google</h3>
+        <x-gradient-border-card
+            img="seo.svg"
+            title="Rank #1 on Google"
+        >
             <p class="text-white text-lg font-roboto mt-4">Web agencies love to promise the world. Look at how many <em>low-quality, low-performant</em> sites there are in Reno, NV.</p>
             <p class="text-white text-lg font-roboto mt-4">Here at Zenivora, you are <strong>guaranteed</strong> a high-quality site that <em>will</em> rank.</p>
             <ul class="list-disc">
@@ -23,9 +29,10 @@
                 <li class="text-white text-lg font-roboto mt-4">Increase visibility with high authority and relevant backlinks</li>
             </ul>
         </x-gradient-border-card>
-        <x-gradient-border-card>
-            <img class="w-12 h-12 mb-4 self-center" src="{{ asset('svg/development.svg') }}" alt="development" />
-            <h3 class="text-white text-xl font-mont font-extrabold text-center">Industry Standard Development</h3>
+        <x-gradient-border-card
+            img="development.svg"
+            title="Industry Standard Development"
+        >
             <p class="text-white text-lg font-roboto mt-4">The developers at Zenivora have experience working with <strong>thousands</strong> of other developers on huge codebases.</p>
             <p class="text-white text-lg font-roboto mt-4">Your software has the <em>ability</em> to run your business for you.</p>
             <ul class="list-disc">
