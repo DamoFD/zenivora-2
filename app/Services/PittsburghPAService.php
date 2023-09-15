@@ -9,20 +9,20 @@ class PittsburghPAService implements LocationServiceInterface {
     public function getTechnology() {
         $technology = [];
 
-        $obj1 = new stdClass();
-        $obj1->title = "Located in Reno, NV";
-        $obj1->img = "marker.svg";
-        $technology[] = $obj1;
+        $tech1 = new stdClass();
+        $tech1->title = "Located in Reno, NV";
+        $tech1->img = "marker.svg";
+        $technology[] = $tech1;
 
-        $obj2 = new stdClass();
-        $obj2->title = "Rank #1 on Google";
-        $obj2->img = "seo.svg";
-        $technology[] = $obj2;
+        $tech2 = new stdClass();
+        $tech2->title = "Rank #1 on Google";
+        $tech2->img = "seo.svg";
+        $technology[] = $tech2;
 
-        $obj3 = new stdClass();
-        $obj3->title = "Industry Standard Development";
-        $obj3->img = "development.svg";
-        $technology[] = $obj3;
+        $tech3 = new stdClass();
+        $tech3->title = "Industry Standard Development";
+        $tech3->img = "development.svg";
+        $technology[] = $tech3;
 
         return $technology;
     }
