@@ -24,11 +24,11 @@
         </form>
         <div class="flex flex-col space-y-6">
             <h3 class="text-white text-xl font-mont font-extrabold">Contact Information</h3>
-            <a target="_blank" href="sms:(775) 230-7383" class="flex items-center">
+            <a target="_blank" href="sms:{{ $phoneNumber->text }}" class="flex items-center">
                 <img class="w-6 h-6" src="{{ asset('svg/sms.svg') }}" alt="sms" />
                 <p class="text-white font-roboto ml-4 text-lg">Text: {{ $phoneNumber->text }}</p>
             </a>
-            <a target="_blank" href="tel:(775) 230-7383" class="flex items-center">
+            <a target="_blank" href="tel:{{ $phoneNumber->call }}" class="flex items-center">
                 <img class="w-6 h-6" src="{{ asset('svg/phone.svg') }}" alt="phone" />
                 <p class="text-white font-roboto ml-4 text-lg">Call: {{ $phoneNumber->call }}</p>
             </a>
