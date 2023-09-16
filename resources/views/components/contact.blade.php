@@ -26,11 +26,11 @@
             <h3 class="text-white text-xl font-mont font-extrabold">Contact Information</h3>
             <a target="_blank" href="sms:(775) 230-7383" class="flex items-center">
                 <img class="w-6 h-6" src="{{ asset('svg/sms.svg') }}" alt="sms" />
-                <p class="text-white font-roboto ml-4 text-lg">Text: (775) 230-7383</p>
+                <p class="text-white font-roboto ml-4 text-lg">Text: {{ $phoneNumber->text }}</p>
             </a>
             <a target="_blank" href="tel:(775) 230-7383" class="flex items-center">
                 <img class="w-6 h-6" src="{{ asset('svg/phone.svg') }}" alt="phone" />
-                <p class="text-white font-roboto ml-4 text-lg">Call: (775) 230-7383</p>
+                <p class="text-white font-roboto ml-4 text-lg">Call: {{ $phoneNumber->call }}</p>
             </a>
             <a target="_blank" href="https://www.facebook.com/Zenivora.Official" class="flex items-center">
                 <img class="w-6 h-6" src="{{ asset('svg/messenger.svg') }}" alt="facebook messenger" />
@@ -40,13 +40,23 @@
                 <img class="w-6 h-6" src="{{ asset('svg/email.svg') }}" alt="email" />
                 <p class="text-white font-roboto ml-4 text-lg">Email: contact@zenivora.com</p>
             </a>
-            <div>
+            <div class="flex">
                 <img class="w-6 h-6" src="{{ asset('svg/marker.svg') }}" alt="location" />
-                <p class="text-white font-roboto ml-4 text-lg">Address:<br />2390 Tripp Dr #2<br />Reno, NV 89512</p>
+                <p class="text-white font-roboto ml-4 text-lg">{!! $locationData->text !!}</p>
             </div>
         </div>
     </div>
     <div id="map" class="w-11/12 lg:w-1/2 h-72 rounded-lg mt-10"></div>
-        <script src="{{ asset('js/leaflet.js') }}">
+
+        <script>
+            var map = L.map('map').setView([{{ $locationData->x }}, {{ $locationData->y }}], {{ $locationData->zoom }});
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            var marker = L.marker([{{ $locationData->x }}, {{ $locationData->y }}]).addTo(map);
+
+            marker.bindPopup("{!! $locationData->text !!}").openPopup();
         </script>
 </section>
