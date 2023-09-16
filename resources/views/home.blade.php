@@ -22,7 +22,7 @@ $technology[] = $obj3;
     <x-hero
         subHeader="Reno Website Designers"/>
     <x-about />
-    <x-technology :technologies="$technology" />
+    <x-technology />
     <x-performance />
     <x-seo />
     <x-security />

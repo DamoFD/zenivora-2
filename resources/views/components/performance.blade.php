@@ -10,7 +10,7 @@
                     <li class="text-white font-roboto">Modern caching techniques</li>
                     <li class="text-white font-roboto">Lossless image compression</li>
                 </ul>
-                <h3 class="text-white text-lg lg:text-xl font-mont font-extrabold mt-10">Instant load speeds are not out of reach! At your local Reno Zenivora, performance is a priority.</h3>
+                <h3 class="text-white text-lg lg:text-xl font-mont font-extrabold mt-10">Instant load speeds are not out of reach! At Zenivora, performance is a priority.</h3>
                 <ul class="list-disc list-inside flex flex-col space-y-2 mt-2">
                     <li class="text-white font-roboto">Loading is money. It literally costs money to transfer data.</li>
                     <li class="text-white font-roboto"><strong>90%</strong> of customers will leave a site that takes longer than a few seconds to load.</li>

@@ -5,9 +5,9 @@
         <p class="text-white text-lg font-roboto mt-4">{{ $text1 }}</p>
         <p class="text-white text-lg font-roboto mt-4">{{ $text2 }}</p>
         <ul class="list-disc">
-            <li class="text-white text-lg font-roboto mt-4">{{ $list1 }}</li>
-            <li class="text-white text-lg font-roboto mt-4">{{ $list2 }}</li>
-            <li class="text-white text-lg font-roboto mt-4">{{ $list3 }}</li>
+            <li class="text-white text-lg font-roboto mt-4">{!! $list1 !!}</li>
+            <li class="text-white text-lg font-roboto mt-4">{!! $list2 !!}</li>
+            <li class="text-white text-lg font-roboto mt-4">{!! $list3 !!}</li>
         </ul>
     </div>
 </div>
