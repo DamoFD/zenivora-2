@@ -27,7 +27,7 @@ class LocationController extends Controller
     protected function getServiceByLocation($location) {
         $map = [
             'pittsburgh-pa' => \App\Services\PittsburghPAService::class,
-            // Add more mappings here
+            'reno-nv' => \App\Services\RenoNVService::class,
         ];
 
         return $map[strtolower($location)] ?? null;
