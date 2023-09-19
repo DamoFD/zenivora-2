@@ -5,9 +5,9 @@
         subHeader="Reno Website Designers"/>
     <x-about />
     <x-technology :technologies="$technologies" />
-    <x-performance :performance="$performance" :performanceData="$performanceData"/>
-    <x-img-left :seo="$seo" :seoData="$seoData"/>
-    <x-img-right :performance="$security" :performanceData="$securityData"/>
+    <x-img-right :information="$performance" />
+    <x-img-left :information="$seo" />
+    <x-img-right :information="$security" />
     <x-pricing />
     <x-contact :locationData="$locationData" :phoneNumber="$phoneNumber"/>
     <canvas class="fixed z-[-1] h-full w-full bg-brand-gray top-0 left-0" id="canvas-2"></canvas>

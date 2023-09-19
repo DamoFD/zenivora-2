@@ -5,9 +5,9 @@
         subHeader="Pittsburgh Website Designers"/>
     <x-about />
     <x-technology :technologies="$technologies" />
-    <x-img-right :performance="$performance" />
-    <x-img-left :seo="$seo" />
-    <x-img-right :performance="$security" />
+    <x-img-right :information="$performance" />
+    <x-img-left :information="$seo" />
+    <x-img-right :information="$security" />
     <x-pricing />
     <x-contact :locationData="$locationData" :phoneNumber="$phoneNumber"/>
     <canvas class="fixed z-[-1] h-full w-full bg-brand-gray top-0 left-0" id="canvas-2"></canvas>
