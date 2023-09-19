@@ -19,6 +19,7 @@ class PittsburghPAService implements LocationServiceInterface
             'phoneNumber' => $this->getNumber(),
             'security' => $this->getSecurity(),
             'seo' => $this->getSeo(),
+            'faq' => $this->getFaq(),
         ];
     }
 
@@ -196,9 +197,55 @@ class PittsburghPAService implements LocationServiceInterface
         return $seo;
     }
 
+    public function getFaq()
+    {
+        $faq = new stdClass();
+        $faq->title = 'Frequently Asked <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">Questions</strong>';
+        $faq->lists = [];
+
+        $faq1 = new stdClass();
+        $faq1->title = '';
+        $faq1->paragraph1 = '';
+        $faq1->paragraph2 = '';
+        $faq1->paragraph3 = '';
+        $faq1->paragraph4 = '';
+        $faq->lists[] = $faq1;
+
+        $faq2 = new stdClass();
+        $faq2->title = '';
+        $faq2->paragraph1 = '';
+        $faq2->paragraph2 = '';
+        $faq->lists[] = $faq2;
+
+        $faq3 = new stdClass();
+        $faq3->title = '';
+        $faq3->paragraph1 = '';
+        $faq3->paragraph2 = '';
+        $faq->lists[] = $faq3;
+
+        $faq4 = new stdClass();
+        $faq4->title = '';
+        $faq4->paragraph1 = '';
+        $faq4->paragraph2 = '';
+        $faq4->paragraph3 = '';
+        $faq4->paragraph4 = '';
+        $faq4->paragraph5 = '';
+        $faq->lists[] = $faq4;
+
+        $faq5 = new stdClass();
+        $faq5->title = '';
+        $faq5->paragraph1 = '';
+        $faq5->paragraph2 = '';
+        $faq->lists[] = $faq5;
+
+        return $faq;
+
+    }
+
+
     /**
-    * Construct Location Object
-    */
+     * Construct Location Object
+     */
     public function getLocation(): stdClass
     {
         $location = new stdClass();
@@ -224,4 +271,6 @@ class PittsburghPAService implements LocationServiceInterface
 
         Return $number;
     }
+
 }
+

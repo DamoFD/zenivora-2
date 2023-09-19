@@ -9,6 +9,7 @@
     <x-img-left :information="$data['seo']" />
     <x-img-right :information="$data['security']" />
     <x-pricing />
+    <x-faq :information="$data['faq']"/>
     <x-contact :locationData="$data['locationData']" :phoneNumber="$data['phoneNumber']"/>
     <canvas class="fixed z-[-1] h-full w-full bg-brand-gray top-0 left-0" id="canvas-2"></canvas>
     <script src="{{ asset('js/star-animation.js') }}"></script>
