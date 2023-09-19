@@ -43,7 +43,7 @@ class PittsburghPAService implements LocationServiceInterface {
     }
 
 
-    public function getPerformanceData()
+    public function getPerformance()
     {
         $performance = new stdClass();
 
@@ -54,28 +54,24 @@ class PittsburghPAService implements LocationServiceInterface {
         $performance->imgDesktop = 'website-pagespeed-score-desktop.webp';
         $performance->imgAlt = 'discordbrowser pagespeed insights';
 
-        return $performance;
-    }
-    public function getPerformance()
-    {
-        $performance = [];
+        $performance->lists = [];
 
         $perf1 = new stdClass();
         $perf1->title = 'Do you choose between beautiful site, or good performance?';
         $perf1->paragraph = 'You can have both!';
         $perf1->list = ['Speed benchmarks for functions','Proper memory management','Modern caching techniques','Lossless image compression'];
-        $performance[] = $perf1;
+        $performance->lists[] = $perf1;
 
         $perf2 = new stdClass();
         $perf2->title = 'At your local Reno Zenivora, performance is a priority.';
         $perf2->paragraph = 'Instant load speeds are not out of reach!!';
         $perf2->list = ['Loading is money. It literally costs money to transfer data.','90% of customers will leave a site that takes longer than a few seconds to load.','Employees have to wait for software to load. That time adds up quickly.','Even our massive sites filled to the brim with functionality load instantly.'];
-        $performance[] = $perf2;
+        $performance->lists[] = $perf2;
 
         return $performance;
     }
 
-    public function getSecurityData()
+    public function getSecurity()
     {
         $security = new stdClass();
 
@@ -85,29 +81,24 @@ class PittsburghPAService implements LocationServiceInterface {
         $security->imgMobile = 'arch-rice-mobile.webp';
         $security->imgDesktop = 'arch-rice-desktop.webp';
         $security->imgAlt = 'Arch Linux Security Practices';
-
-        return $security;
-    }
-    public function getSecurity()
-    {
-        $security = [];
+        $security->lists = [];
 
         $sec1 = new stdClass();
         $sec1->title = 'Why does security matter?';
         $sec1->paragraph = 'Security is important from a legal and moral standpoint.';
         $sec1->list = ['Penetration Testing','Brute Force Attempts','SQL injection','Cross-site scripting'];
-        $security[] = $sec1;
+        $security->lists[] = $sec1;
 
         $sec2 = new stdClass();
         $sec2->title = 'Security is a priority at your Reno Zenivora!';
         $sec2->paragraph = 'Protect your Business';
         $sec2->list = ['Cyber crime is expected to grow 15% every year','Wordpress is the most hacked CMS (mainly due to DIY)','There are 2,200 successful cyberattacks per day','95% of cyberattacks are due to human error'];
-        $security[] = $sec2;
+        $security->lists[] = $sec2;
 
         return $security;
     }
 
-    public function getSeoData()
+    public function getSeo()
     {
         $seo = new stdClass();
 
@@ -117,28 +108,22 @@ class PittsburghPAService implements LocationServiceInterface {
         $seo->imgMobile = 'discordbrowser-stats-mobile.webp';
         $seo->imgDesktop = 'discordbrowser-stats-desktop.webp';
         $seo->imgAlt = 'discordbrowser stats';
-
-        return $seo;
-    }
-    public function getSeo()
-    {
-        $seo = [];
+        $seo->lists = [];
 
         $seo1 = new stdClass();
         $seo1->title = '8.5 billion searches take place on Google every day.';
         $seo1->paragraph = 'We know what your customers are searching.';
         $seo1->list = ['Keyword research with <a target="_blank" class="text-brand-primary underline" href="https://ahrefs.com">ahrefs</a>','Original copy with <a target="_blank" class="text-brand-primary underline" href="https://surferseo.com">Surfer SEO</a>','Modern backlink building techniques','Accessibility and translations'];
-        $seo[] = $seo1;
+        $seo->lists[] = $seo1;
 
         $seo2 = new stdClass();
         $seo2->title = 'Outranking your competitors on Google is not out of reach!';
         $seo2->paragraph = 'Beat your competition!';
         $seo2->list = ['SEO is a long term marketing strategy to gain organic traffic','Backlinks are referrals from other sites telling search engines that your site is legit','60% of users click the top 3 search results','Google drives 8 times more traffic than all social media combined'];
-        $seo[] = $seo2;
+        $seo->lists[] = $seo2;
 
         return $seo;
     }
-
 
     public function getLocation() {
         $location = new stdClass();
