@@ -29,7 +29,7 @@
         ')
     <x-hero
         :subHeader="$data['meta']->title"/>
-    <x-about />
+    <x-about :information="$data['about']"/>
     <x-technology :technologies="$data['technologies']" />
     <x-img-right :information="$data['performance']" />
     <x-img-left :information="$data['seo']" />
