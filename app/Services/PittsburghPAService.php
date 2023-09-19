@@ -13,6 +13,7 @@ class PittsburghPAService implements LocationServiceInterface
     {
         return [
             'meta' => $this->getMetaData(),
+            'about' => $this->getAbout(),
             'technologies' => $this->getTechnology(),
             'performance' => $this->getPerformance(),
             'locationData' => $this->getLocation(),
@@ -34,6 +35,18 @@ class PittsburghPAService implements LocationServiceInterface
         $data->description = 'Elevate your brand with Zenivora, the leading Pittsburgh Website Designers. Expertise in responsive design, SEO, and e-commerce solutions. Based in Pittsburgh, PA.';
 
         return $data;
+    }
+
+    /**
+     * Construct About Data
+     */
+    public function getAbout(): stdClass
+    {
+        $about = new stdClass();
+
+        $about->title = 'Our Pittsburgh Web Design Clients <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">Get Results</strong>';
+
+        return $about;
     }
 
     /**
@@ -99,7 +112,7 @@ class PittsburghPAService implements LocationServiceInterface
         $performance->lists[] = $perf1;
 
         $perf2 = new stdClass();
-        $perf2->title = 'At your local Reno Zenivora, performance is a priority.';
+        $perf2->title = 'Instant load speeds are not out of reach! At your local Pittsburgh Zenivora, performance is a priority.';
         $perf2->paragraph = 'Instant load speeds are not out of reach!!';
         $perf2->list = [
             'Loading is money. It literally costs money to transfer data.',
@@ -140,7 +153,7 @@ class PittsburghPAService implements LocationServiceInterface
         $security->lists[] = $sec1;
 
         $sec2 = new stdClass();
-        $sec2->title = 'Security is a priority at your Reno Zenivora!';
+        $sec2->title = 'Security is a priority at your Pittsburgh Zenivora!';
         $sec2->paragraph = 'Protect your Business';
         $sec2->list = [
             'Cyber crime is expected to grow 15% every year',
@@ -182,7 +195,7 @@ class PittsburghPAService implements LocationServiceInterface
         $seo->lists[] = $seo1;
 
         $seo2 = new stdClass();
-        $seo2->title = 'Outranking your competitors on Google is not out of reach!';
+        $seo2->title = 'Measured Results Directly from Google!';
         $seo2->paragraph = 'Beat your competition!';
         $seo2->list = [
             'SEO is a long term marketing strategy to gain organic traffic',
@@ -201,6 +214,9 @@ class PittsburghPAService implements LocationServiceInterface
         return $seo;
     }
 
+    /**
+     * Construct Faq Array of Objects
+     */
     public function getFaq()
     {
         $faq = new stdClass();

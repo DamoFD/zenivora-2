@@ -13,6 +13,7 @@ class RenoNVService implements LocationServiceInterface
     {
         return [
             'meta' => $this->getMetaData(),
+            'about' => $this->getAbout(),
             'technologies' => $this->getTechnology(),
             'performance' => $this->getPerformance(),
             'locationData' => $this->getLocation(),
@@ -34,6 +35,18 @@ class RenoNVService implements LocationServiceInterface
         $data->description = 'Elevate your brand with Zenivora, the leading Reno Website Designers. Expertise in responsive design, SEO, and e-commerce solutions. Based in Reno, NV.';
 
         return $data;
+    }
+
+    /**
+     * Construct About Data
+     */
+    public function getAbout(): stdClass
+    {
+        $about = new stdClass();
+
+        $about->title = 'Trusted by <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">Major Brands</strong> you know and love';
+
+        return $about;
     }
 
     /**
@@ -197,6 +210,9 @@ class RenoNVService implements LocationServiceInterface
         return $seo;
     }
 
+    /**
+     * Construct FAQ Object
+     */
     public function getFaq()
     {
         $faq = new stdClass();
