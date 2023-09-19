@@ -6,7 +6,11 @@ use stdClass;
 
 class HomeService implements LocationServiceInterface {
 
-    public function getTechnology() {
+    /**
+    * Construct Technology Array of Objects
+    */
+    public function getTechnology(): array
+    {
         $technology = [];
 
         $tech1 = new stdClass();
@@ -42,7 +46,11 @@ class HomeService implements LocationServiceInterface {
         return $technology;
     }
 
-    public function getLocation() {
+    /**
+    * Construct Location Object
+    */
+    public function getLocation(): stdClass
+    {
         $location = new stdClass();
 
         $location->text = '<b>Zenivora</b><br>2390 Tripp Dr #2<br>Reno, NV 89512';
@@ -54,7 +62,11 @@ class HomeService implements LocationServiceInterface {
 
     }
 
-    public function getNumber() {
+    /**
+    * Construct Number Object
+    */
+    public function getNumber(): stdClass
+    {
         $number = new stdClass();
 
         $number->text = '(775) 230-7383';
@@ -62,6 +74,4 @@ class HomeService implements LocationServiceInterface {
 
         Return $number;
     }
-
 }
-

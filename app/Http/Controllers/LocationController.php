@@ -2,38 +2,31 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use Illuminate\View\View;
+use App\Services\ServiceFactory;
 
 class LocationController extends Controller
 {
-    public function show($location) {
-        $serviceClass = $this->getServiceByLocation($location);
+    // Service Factory Object
+    protected object $serviceFactory;
 
-        if (!$serviceClass) {
+    // Construct Service Factory Object
+    public function __construct(ServiceFactory $serviceFactory)
+    {
+        $this->serviceFactory = $serviceFactory;
+    }
+
+    // Get Location View
+    public function show($location): View
+    {
+        $service = $this->serviceFactory->make($location);
+
+        if (!$service) {
             abort(404, 'Location not found');
         }
 
-        $service = app($serviceClass);
-        $technologies = $service->getTechnology();
-        $locationData = $service->getLocation();
-        $phoneNumber = $service->getNumber();
-        $performance = $service->getPerformance();
-        $performanceData = $service->getPerformanceData();
-        $security = $service->getSecurity();
-        $securityData = $service->getSecurityData();
-        $seo = $service->getSeo();
-        $seoData = $service->getSeoData();
+        $data = $service->getData();
 
-        return view("locations.{$location}", compact(['technologies', 'locationData', 'phoneNumber', 'performance', 'performanceData', 'security', 'securityData', 'seo', 'seoData']));
-    }
-
-    protected function getServiceByLocation($location) {
-        $map = [
-            'pittsburgh-pa' => \App\Services\PittsburghPAService::class,
-            'reno-nv' => \App\Services\RenoNVService::class,
-        ];
-
-        return $map[strtolower($location)] ?? null;
+        return view("location", compact('data'));
     }
 }

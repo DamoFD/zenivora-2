@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\View\View;
+
 class HomeController extends Controller
 {
-    public function home() {
+    // Get Home View
+    public function home(): view
+    {
         $service = new \App\Services\HomeService();
         $technologies = $service->getTechnology();
         $locationData = $service->getLocation();
