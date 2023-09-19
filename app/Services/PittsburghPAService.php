@@ -75,6 +75,39 @@ class PittsburghPAService implements LocationServiceInterface {
         return $performance;
     }
 
+    public function getSecurityData()
+    {
+        $security = new stdClass();
+
+        $security->title = 'Enterprise-class <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">security</strong>';
+        $security->paragraph1 = 'Here is a visual representation of <a target="_blank" class="text-brand-primary underline" href="https://threatmap.checkpoint.com/">real-time cyberattacks</a>';
+        $security->paragraph2 = 'Check your safe browsing status <a target="_blank" class="text-brand-primary underline" href="https://transparencyreport.google.com/safe-browsing/search?hl=en">Google\'s Transparency Report.</a>';
+        $security->imgMobile = 'website-pagespeed-score-mobile.webp';
+        $security->imgDesktop = 'website-pagespeed-score-desktop.webp';
+        $security->imgAlt = 'discordbrowser pagespeed insights';
+
+        return $security;
+    }
+    public function getSecurity()
+    {
+        $security = [];
+
+        $sec1 = new stdClass();
+        $sec1->title = 'Why does security matter?';
+        $sec1->paragraph = 'Security is important from a legal and moral standpoint.';
+        $sec1->list = ['Penetration Testing','Brute Force Attempts','SQL injection','Cross-site scripting'];
+        $security[] = $sec1;
+
+        $sec2 = new stdClass();
+        $sec2->title = 'Security is a priority at your Reno Zenivora!';
+        $sec2->paragraph = 'Protect your Business';
+        $sec2->list = ['Cyber crime is expected to grow 15% every year','Wordpress is the most hacked CMS (mainly due to DIY)','There are 2,200 successful cyberattacks per day','95% of cyberattacks are due to human error'];
+        $security[] = $sec2;
+
+        return $security;
+    }
+
+
     public function getLocation() {
         $location = new stdClass();
 
