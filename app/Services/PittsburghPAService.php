@@ -4,7 +4,36 @@ namespace App\Services;
 
 use stdClass;
 
-class PittsburghPAService implements LocationServiceInterface {
+class PittsburghPAService implements LocationServiceInterface
+{
+    /**
+    * Construct Associative Array
+    */
+    public function getData(): array
+    {
+        return [
+            'meta' => $this->getMetaData(),
+            'technologies' => $this->getTechnology(),
+            'performance' => $this->getPerformance(),
+            'locationData' => $this->getLocation(),
+            'phoneNumber' => $this->getNumber(),
+            'security' => $this->getSecurity(),
+            'seo' => $this->getSeo(),
+        ];
+    }
+
+    /**
+    * Construct Meta Data
+    */
+    public function getMetaData(): stdClass
+    {
+        $data = new stdClass();
+
+        $data->title = 'Pittsburgh Website Designers';
+        $data->description = 'Elevate your brand with Zenivora, the leading Pittsburgh Website Designers. Expertise in responsive design, SEO, and e-commerce solutions. Based in Pittsburgh, PA.';
+
+        return $data;
+    }
 
     /**
     * Construct Technology Array of Objects

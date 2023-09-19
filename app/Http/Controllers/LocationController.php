@@ -3,37 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\View\View;
+use App\Services\ServiceFactory;
 
 class LocationController extends Controller
 {
+    // Service Factory Object
+    protected object $serviceFactory;
+
+    // Construct Service Factory Object
+    public function __construct(ServiceFactory $serviceFactory)
+    {
+        $this->serviceFactory = $serviceFactory;
+    }
+
     // Get Location View
     public function show($location): View
     {
-        $serviceClass = $this->getServiceByLocation($location);
+        $service = $this->serviceFactory->make($location);
 
-        if (!$serviceClass) {
+        if (!$service) {
             abort(404, 'Location not found');
         }
 
-        $service = app($serviceClass);
-        $technologies = $service->getTechnology();
-        $locationData = $service->getLocation();
-        $phoneNumber = $service->getNumber();
-        $performance = $service->getPerformance();
-        $security = $service->getSecurity();
-        $seo = $service->getSeo();
+        $data = $service->getData();
 
-        return view("locations.{$location}", compact(['technologies', 'locationData', 'phoneNumber', 'performance', 'security', 'seo']));
-    }
-
-    // Get Service Class By Location
-    protected function getServiceByLocation($location): string
-    {
-        $map = [
-            'pittsburgh-pa' => \App\Services\PittsburghPAService::class,
-            'reno-nv' => \App\Services\RenoNVService::class,
-        ];
-
-        return $map[strtolower($location)] ?? null;
+        return view("location", compact('data'));
     }
 }

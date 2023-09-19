@@ -4,7 +4,36 @@ namespace App\Services;
 
 use stdClass;
 
-class RenoNVService implements LocationServiceInterface {
+class RenoNVService implements LocationServiceInterface
+{
+    /**
+    * Construct Associative Array
+    */
+    public function getData(): array
+    {
+        return [
+            'meta' => $this->getMetaData(),
+            'technologies' => $this->getTechnology(),
+            'performance' => $this->getPerformance(),
+            'locationData' => $this->getLocation(),
+            'phoneNumber' => $this->getNumber(),
+            'security' => $this->getSecurity(),
+            'seo' => $this->getSeo(),
+        ];
+    }
+
+    /**
+    * Construct Meta Data
+    */
+    public function getMetaData(): stdClass
+    {
+        $data = new stdClass();
+
+        $data->title = 'Reno Website Designers';
+        $data->description = 'Elevate your brand with Zenivora, the leading Reno Website Designers. Expertise in responsive design, SEO, and e-commerce solutions. Based in Reno, NV.';
+
+        return $data;
+    }
 
     /**
     * Construct Technology Array of Objects
