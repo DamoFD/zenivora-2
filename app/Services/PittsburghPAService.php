@@ -273,4 +273,3 @@ class PittsburghPAService implements LocationServiceInterface
     }
 
 }
-

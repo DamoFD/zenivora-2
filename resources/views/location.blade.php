@@ -1,6 +1,32 @@
 <x-app-layout>
     @section('title', $data['meta']->title)
     @section('description', $data['meta']->description)
+    @section('schema', '
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+          @foreach ($data['faq'] as $question)
+            {
+              "@type": "Question",
+              "name": "{{ $question->title }}",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Some content 1.1. Some content 1.2. Some content 1.3. Some content 1.4."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "FAQ Title 2",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Some content 2.1. Some content 2.2."
+              }
+            }
+            //... Continue for other FAQs
+          ]
+        }
+        ')
     <x-hero
         :subHeader="$data['meta']->title"/>
     <x-about />
