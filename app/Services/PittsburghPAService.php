@@ -82,9 +82,9 @@ class PittsburghPAService implements LocationServiceInterface {
         $security->title = 'Enterprise-class <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">security</strong>';
         $security->paragraph1 = 'Here is a visual representation of <a target="_blank" class="text-brand-primary underline" href="https://threatmap.checkpoint.com/">real-time cyberattacks</a>';
         $security->paragraph2 = 'Check your safe browsing status <a target="_blank" class="text-brand-primary underline" href="https://transparencyreport.google.com/safe-browsing/search?hl=en">Google\'s Transparency Report.</a>';
-        $security->imgMobile = 'website-pagespeed-score-mobile.webp';
-        $security->imgDesktop = 'website-pagespeed-score-desktop.webp';
-        $security->imgAlt = 'discordbrowser pagespeed insights';
+        $security->imgMobile = 'arch-rice-mobile.webp';
+        $security->imgDesktop = 'arch-rice-desktop.webp';
+        $security->imgAlt = 'Arch Linux Security Practices';
 
         return $security;
     }
@@ -105,6 +105,38 @@ class PittsburghPAService implements LocationServiceInterface {
         $security[] = $sec2;
 
         return $security;
+    }
+
+    public function getSeoData()
+    {
+        $seo = new stdClass();
+
+        $seo->title = 'Proven <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">competitive SEO</strong> practices';
+        $seo->paragraph1 = 'Here is our traffic for the DiscordBrowser after implementing our SEO techniques.</a>';
+        $seo->paragraph2 = 'Check your backlink profile with <a target="_blank" href="https://ahrefs.com/backlink-checker" class="text-brand-primary underline">ahrefs</a>';
+        $seo->imgMobile = 'discordbrowser-stats-mobile.webp';
+        $seo->imgDesktop = 'discordbrowser-stats-desktop.webp';
+        $seo->imgAlt = 'discordbrowser stats';
+
+        return $seo;
+    }
+    public function getSeo()
+    {
+        $seo = [];
+
+        $seo1 = new stdClass();
+        $seo1->title = '8.5 billion searches take place on Google every day.';
+        $seo1->paragraph = 'We know what your customers are searching.';
+        $seo1->list = ['Keyword research with <a target="_blank" class="text-brand-primary underline" href="https://ahrefs.com">ahrefs</a>','Original copy with <a target="_blank" class="text-brand-primary underline" href="https://surferseo.com">Surfer SEO</a>','Modern backlink building techniques','Accessibility and translations'];
+        $seo[] = $seo1;
+
+        $seo2 = new stdClass();
+        $seo2->title = 'Outranking your competitors on Google is not out of reach!';
+        $seo2->paragraph = 'Beat your competition!';
+        $seo2->list = ['SEO is a long term marketing strategy to gain organic traffic','Backlinks are referrals from other sites telling search engines that your site is legit','60% of users click the top 3 search results','Google drives 8 times more traffic than all social media combined'];
+        $seo[] = $seo2;
+
+        return $seo;
     }
 
 
