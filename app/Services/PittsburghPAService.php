@@ -42,6 +42,39 @@ class PittsburghPAService implements LocationServiceInterface {
         return $technology;
     }
 
+
+    public function getPerformanceData()
+    {
+        $performance = new stdClass();
+
+        $performance->title = 'Industry leading <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">performance</strong>';
+        $performance->paragraph1 = 'Here is our benchmark for the <a target="_blank" class="text-brand-primary underline" href="https://discordbrowser.com">DiscordBrowser.</a>';
+        $performance->paragraph2 = 'Check the benchmark for your site at <a target="_blank" class="text-brand-primary underline" href="https://pagespeed.web.dev/">Google\'s Pagespeed Insights.</a>';
+        $performance->imgMobile = 'website-pagespeed-score-mobile.webp';
+        $performance->imgDesktop = 'website-pagespeed-score-desktop.webp';
+        $performance->imgAlt = 'discordbrowser pagespeed insights';
+
+        return $performance;
+    }
+    public function getPerformance()
+    {
+        $performance = [];
+
+        $perf1 = new stdClass();
+        $perf1->title = 'Do you choose between beautiful site, or good performance?';
+        $perf1->paragraph = 'You can have both!';
+        $perf1->list = ['Speed benchmarks for functions','Proper memory management','Modern caching techniques','Lossless image compression'];
+        $performance[] = $perf1;
+
+        $perf2 = new stdClass();
+        $perf2->title = 'At your local Reno Zenivora, performance is a priority.';
+        $perf2->paragraph = 'Instant load speeds are not out of reach!!';
+        $perf2->list = ['Loading is money. It literally costs money to transfer data.','90% of customers will leave a site that takes longer than a few seconds to load.','Employees have to wait for software to load. That time adds up quickly.','Even our massive sites filled to the brim with functionality load instantly.'];
+        $performance[] = $perf2;
+
+        return $performance;
+    }
+
     public function getLocation() {
         $location = new stdClass();
 

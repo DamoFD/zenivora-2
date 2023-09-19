@@ -18,8 +18,10 @@ class LocationController extends Controller
         $technologies = $service->getTechnology();
         $locationData = $service->getLocation();
         $phoneNumber = $service->getNumber();
+        $performance = $service->getPerformance();
+        $performanceData = $service->getPerformanceData();
 
-        return view("locations.{$location}", compact(['technologies', 'locationData', 'phoneNumber']));
+        return view("locations.{$location}", compact(['technologies', 'locationData', 'phoneNumber', 'performance', 'performanceData']));
     }
 
     protected function getServiceByLocation($location) {

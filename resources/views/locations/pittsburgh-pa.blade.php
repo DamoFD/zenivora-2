@@ -1,11 +1,11 @@
 <x-app-layout>
-    @section('title', 'Unlock Your Brand\'s Potential With Reno Website Designers')
-    @section('description', 'Elevate your brand with Zenivora, the leading Reno Website Designers. Expertise in responsive design, SEO, and e-commerce solutions. Based in Reno, NV.')
+    @section('title', 'Unlock Your Brand\'s Potential With Pittsburgh0 Website Designers')
+    @section('description', 'Elevate your brand with Zenivora, the leading Pittsburgh Website Designers. Expertise in responsive design, SEO, and e-commerce solutions. Based in Pittsburgh, PA.')
     <x-hero
-        subHeader="Reno Website Designers"/>
+        subHeader="Pittsburgh Website Designers"/>
     <x-about />
     <x-technology :technologies="$technologies" />
-    <x-performance />
+    <x-performance :performance="$performance" :performanceData="$performanceData"/>
     <x-seo />
     <x-security />
     <x-pricing />
