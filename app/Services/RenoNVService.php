@@ -6,7 +6,11 @@ use stdClass;
 
 class RenoNVService implements LocationServiceInterface {
 
-    public function getTechnology() {
+    /**
+    * Construct Technology Array of Objects
+    */
+    public function getTechnology(): array
+    {
         $technology = [];
 
         $tech1 = new stdClass();
@@ -42,7 +46,10 @@ class RenoNVService implements LocationServiceInterface {
         return $technology;
     }
 
-    public function getPerformance()
+    /**
+    * Construct Performance Object
+    */
+    public function getPerformance(): stdClass
     {
         $performance = new stdClass();
 
@@ -80,7 +87,10 @@ class RenoNVService implements LocationServiceInterface {
         return $performance;
     }
 
-    public function getSecurity()
+    /**
+    * Construct Security Object
+    */
+    public function getSecurity(): stdClass
     {
         $security = new stdClass();
 
@@ -117,7 +127,10 @@ class RenoNVService implements LocationServiceInterface {
         return $security;
     }
 
-    public function getSeo()
+    /**
+    * Construct SEO Object
+    */
+    public function getSeo(): stdClass
     {
         $seo = new stdClass();
 
@@ -154,7 +167,11 @@ class RenoNVService implements LocationServiceInterface {
         return $seo;
     }
 
-    public function getLocation() {
+    /**
+    * Construct Location Object
+    */
+    public function getLocation(): stdClass
+    {
         $location = new stdClass();
 
         $location->text = '<b>Zenivora</b><br>2390 Tripp Dr #2<br>Reno, NV 89512';
@@ -166,7 +183,11 @@ class RenoNVService implements LocationServiceInterface {
 
     }
 
-    public function getNumber() {
+    /**
+    * Construct Number Object
+    */
+    public function getNumber(): stdClass
+    {
         $number = new stdClass();
 
         $number->text = '(775) 230-7383';
@@ -174,6 +195,4 @@ class RenoNVService implements LocationServiceInterface {
 
         Return $number;
     }
-
 }
-

@@ -6,7 +6,11 @@ use stdClass;
 
 class PittsburghPAService implements LocationServiceInterface {
 
-    public function getTechnology() {
+    /**
+    * Construct Technology Array of Objects
+    */
+    public function getTechnology(): array
+    {
         $technology = [];
 
         $tech1 = new stdClass();
@@ -42,8 +46,10 @@ class PittsburghPAService implements LocationServiceInterface {
         return $technology;
     }
 
-
-    public function getPerformance()
+    /**
+    * Construct Performance Object
+    */
+    public function getPerformance(): stdClass
     {
         $performance = new stdClass();
 
@@ -81,7 +87,10 @@ class PittsburghPAService implements LocationServiceInterface {
         return $performance;
     }
 
-    public function getSecurity()
+    /**
+    * Construct Security Object
+    */
+    public function getSecurity(): stdClass
     {
         $security = new stdClass();
 
@@ -118,7 +127,10 @@ class PittsburghPAService implements LocationServiceInterface {
         return $security;
     }
 
-    public function getSeo()
+    /**
+    * Construct SEO Object
+    */
+    public function getSeo(): stdClass
     {
         $seo = new stdClass();
 
@@ -155,7 +167,11 @@ class PittsburghPAService implements LocationServiceInterface {
         return $seo;
     }
 
-    public function getLocation() {
+    /**
+    * Construct Location Object
+    */
+    public function getLocation(): stdClass
+    {
         $location = new stdClass();
 
         $location->text = 'Zenivora<br>Pittsburgh, PA 15108';
@@ -167,7 +183,11 @@ class PittsburghPAService implements LocationServiceInterface {
 
     }
 
-    public function getNumber() {
+    /**
+    * Construct Number Object
+    */
+    public function getNumber(): stdClass
+    {
         $number = new stdClass();
 
         $number->text = '(412)228-0872';
@@ -175,6 +195,4 @@ class PittsburghPAService implements LocationServiceInterface {
 
         Return $number;
     }
-
 }
-

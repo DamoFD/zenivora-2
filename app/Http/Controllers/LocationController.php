@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use Illuminate\View\View;
 
 class LocationController extends Controller
 {
-    public function show($location) {
+    // Get Location View
+    public function show($location): View
+    {
         $serviceClass = $this->getServiceByLocation($location);
 
         if (!$serviceClass) {
@@ -25,7 +26,9 @@ class LocationController extends Controller
         return view("locations.{$location}", compact(['technologies', 'locationData', 'phoneNumber', 'performance', 'security', 'seo']));
     }
 
-    protected function getServiceByLocation($location) {
+    // Get Service Class By Location
+    protected function getServiceByLocation($location): string
+    {
         $map = [
             'pittsburgh-pa' => \App\Services\PittsburghPAService::class,
             'reno-nv' => \App\Services\RenoNVService::class,
