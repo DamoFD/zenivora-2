@@ -23,9 +23,10 @@
                     {{ asset("img/{$performanceData->imgMobile}") }} 700w,
                     {{ asset("img/{$performanceData->imgDesktop}") }} 1024w"
                      sizes="(max-width: 700px) 100vw, 1024px"
+                     class="rounded-lg"
                      src="{{ asset("img/{$performanceData->imgDesktop}") }}"
-                     alt="{{ $performanceData->imgAlt }}">
-
+                     alt="{{ $performanceData->imgAlt }}"
+                >
             </div>
         </div>
 </section>

@@ -22,8 +22,10 @@ class LocationController extends Controller
         $performanceData = $service->getPerformanceData();
         $security = $service->getSecurity();
         $securityData = $service->getSecurityData();
+        $seo = $service->getSeo();
+        $seoData = $service->getSeoData();
 
-        return view("locations.{$location}", compact(['technologies', 'locationData', 'phoneNumber', 'performance', 'performanceData', 'security', 'securityData']));
+        return view("locations.{$location}", compact(['technologies', 'locationData', 'phoneNumber', 'performance', 'performanceData', 'security', 'securityData', 'seo', 'seoData']));
     }
 
     protected function getServiceByLocation($location) {
