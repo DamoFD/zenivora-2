@@ -21,6 +21,7 @@ class PittsburghPAService implements LocationServiceInterface
             'security' => $this->getSecurity(),
             'seo' => $this->getSeo(),
             'faq' => $this->getFaq(),
+            'schema' => $this->getSchema(),
         ];
     }
 
@@ -301,6 +302,32 @@ class PittsburghPAService implements LocationServiceInterface
         $number->call = '(412)228-0872';
 
         Return $number;
+    }
+
+    public function getSchema(): string
+    {
+        $faqArray = [];
+
+        foreach ($this->getFaq()->lists as $faq) {
+            $faqArray[] = [
+                "@type" => "Question",
+                "name" => $faq->title,
+                "acceptedAnswer" => [
+                    "@type" => "Answer",
+                    "text" => $faq->paragraph[0]
+                ]
+            ];
+        }
+
+        $schemaArray = [
+            "@context" => "https://schema.org",
+            "@type" => "FAQPage",
+            "mainEntity" => $faqArray
+        ];
+
+        $schema = json_encode($schemaArray, JSON_PRETTY_PRINT);
+
+        return $schema;
     }
 
 }

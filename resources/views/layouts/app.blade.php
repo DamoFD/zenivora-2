@@ -42,9 +42,9 @@
         <link rel="icon" href="{{ asset('img/zenivora-logo.webp') }}" type="image/webp">
         <link rel="shortcut icon" href="{{ asset('img/zenivora-logo.webp') }}">
 
-        <script type="application/ld+json">
-            @yield('schema')
-        </script>
+        @section('schema')
+
+        @show
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
