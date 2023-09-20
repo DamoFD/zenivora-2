@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Helpers\SchemaHelper;
 use stdClass;
 
 class RenoNVService implements LocationServiceInterface
@@ -21,7 +22,7 @@ class RenoNVService implements LocationServiceInterface
             'security' => $this->getSecurity(),
             'seo' => $this->getSeo(),
             'faq' => $this->getfaq(),
-            'schema' => $this->getSchema(),
+            'schema' => SchemaHelper::getSchema($this->getfaq()->lists),
         ];
     }
 
@@ -313,31 +314,5 @@ class RenoNVService implements LocationServiceInterface
         $number->call = '(775) 230-7383';
 
         Return $number;
-    }
-
-    public function getSchema(): string
-    {
-        $faqArray = [];
-
-        foreach ($this->getFaq()->lists as $faq) {
-            $faqArray[] = [
-                "@type" => "Question",
-                "name" => $faq->title,
-                "acceptedAnswer" => [
-                    "@type" => "Answer",
-                    "text" => $faq->paragraph[0]
-                ]
-            ];
-        }
-
-        $schemaArray = [
-            "@context" => "https://schema.org",
-            "@type" => "FAQPage",
-            "mainEntity" => $faqArray
-        ];
-
-        $schema = json_encode($schemaArray, JSON_PRETTY_PRINT);
-
-        return $schema;
     }
 }
