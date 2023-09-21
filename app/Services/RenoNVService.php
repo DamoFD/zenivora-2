@@ -203,7 +203,7 @@ class RenoNVService implements LocationServiceInterface
         ];
         $seo->lists[] = $seo2;
 
-        $seo->paragraph1 = 'Here is our traffic for the DiscordBrowser after implementing our SEO techniques.</a>';
+        $seo->paragraph1 = 'Here is our traffic for DiscordBrowser after implementing our SEO techniques.</a>';
         $seo->paragraph2 = 'Check your backlink profile with <a target="_blank" href="https://ahrefs.com/backlink-checker" class="text-brand-primary underline">ahrefs</a>';
         $seo->img = 'discordbrowser-stats-desktop.webp';
         $seo->imgAlt = 'discordbrowser stats';

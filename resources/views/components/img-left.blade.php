@@ -13,7 +13,7 @@
                 <div class="mb-4">
                     <h3 class="text-white text-lg lg:text-xl font-mont font-extrabold">{{ $list->title }}</h3>
                     <p class="text-white text-lg lg:text-xl font-mont font-extrabold mt-2">{{ $list->paragraph }}</p>
-                    <ul class="list-disc list-inside flex flex-col space-y-2 mt-2">
+                    <ul class="list-disc pl-4 flex flex-col space-y-2 mt-2">
                         @foreach($list->list as $item)
                             <li class="text-white font-roboto">{!! $item !!}</li>
                         @endforeach
@@ -22,7 +22,9 @@
             @endforeach
             <p class="text-white text-lg lg:text-xl font-mont font-extrabold mt-10">{!! $information->paragraph1 !!}</p>
             <p class="text-white text-lg lg:text-xl font-mont font-extrabold mt-2 mb-5">{!! $information->paragraph2 !!}</p>
-            <x-primary-link href="#contact">Get Quote</x-primary-link>
+                <div class="flex justify-center md:justify-start w-full">
+                    <x-primary-link href="#contact">Get Quote</x-primary-link>
+                </div>
         </div>
     </div>
 </section>

@@ -1,3 +1,5 @@
+@php
+@endphp
 <header class="bg-brand-gray z-[5] fixed top-0 left-0 w-full" x-data="{ open: false }">
     <nav class="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-22 lg:mt-2">
 
