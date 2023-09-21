@@ -124,11 +124,11 @@ class HomeService implements LocationServiceInterface
         ];
         $performance->lists[] = $perf2;
 
-        $performance->paragraph1 = 'Here is our benchmark for the <a target="_blank" class="text-brand-primary underline" href="https://discordbrowser.com">DiscordBrowser.</a>';
+        $performance->paragraph1 = 'Here is our benchmark for Zenivora';
         $performance->paragraph2 = 'Check the benchmark for your site at <a target="_blank" class="text-brand-primary underline" href="https://pagespeed.web.dev/">Google\'s Pagespeed Insights.</a>';
         $performance->imgMobile = 'website-pagespeed-score-mobile.webp';
         $performance->imgDesktop = 'cropped-zenivora-pagespeed.webp';
-        $performance->imgAlt = 'discordbrowser pagespeed insights';
+        $performance->imgAlt = 'zenivora pagespeed insights';
 
         return $performance;
     }
@@ -141,13 +141,8 @@ class HomeService implements LocationServiceInterface
         $security = new stdClass();
 
         $security->title = 'Enterprise-class <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">security</strong>';
-        $security->paragraph1 = 'Here is a visual representation of <a target="_blank" class="text-brand-primary underline" href="https://threatmap.checkpoint.com/">real-time cyberattacks</a>';
-        $security->paragraph2 = 'Check your safe browsing status <a target="_blank" class="text-brand-primary underline" href="https://transparencyreport.google.com/safe-browsing/search?hl=en">Google\'s Transparency Report.</a>';
-        $security->imgMobile = 'arch-rice-mobile.webp';
-        $security->imgDesktop = 'arch-rice-desktop.webp';
-        $security->imgAlt = 'Arch Linux Security Practices';
-        $security->lists = [];
 
+        $security->lists = [];
         $sec1 = new stdClass();
         $sec1->title = 'Why does security matter?';
         $sec1->paragraph = 'Security is important from a legal and moral standpoint.';
@@ -169,6 +164,11 @@ class HomeService implements LocationServiceInterface
             '95% of cyberattacks are due to human error'
         ];
         $security->lists[] = $sec2;
+
+        $security->paragraph1 = 'Here is a visual representation of <a target="_blank" class="text-brand-primary underline" href="https://threatmap.checkpoint.com/">real-time cyberattacks</a>';
+        $security->paragraph2 = 'Check your safe browsing status <a target="_blank" class="text-brand-primary underline" href="https://transparencyreport.google.com/safe-browsing/search?hl=en">Google\'s Transparency Report.</a>';
+        $security->img = 'arch-resize.webp';
+        $security->imgAlt = 'Arch Linux Security Practices';
 
         return $security;
     }
