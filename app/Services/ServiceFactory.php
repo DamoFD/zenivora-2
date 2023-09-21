@@ -7,17 +7,22 @@ class ServiceFactory
     /**
     * Match URL With Service Class
     */
-    protected array $map = [
+    protected static array $map = [
         'pittsburgh-pa' => PittsburghPAService::class,
         'reno-nv' => RenoNVService::class,
     ];
+
+    public static function getLocations(): array
+    {
+        return array_keys(self::$map);
+    }
 
     /**
     * Return Service Object
     */
     public function make($location): ?object
     {
-        $service = $this->map[strtolower($location)] ?? null;
+        $service = self::$map[strtolower($location)] ?? null;
 
         if (!$service) {
             return null;

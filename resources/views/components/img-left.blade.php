@@ -2,12 +2,9 @@
     <h2 class="text-white text-3xl font-mont w-11/12 lg:w-full font-extrabold text-center">{!! $information->title !!}</h2>
     <div class="grid grid-cols-1 lg:grid-cols-2 w-11/12 lg:w-3/4 mt-10 gap-10">
         <div>
-            <img srcset="
-                 {{ asset("img/{$information->imgMobile}") }} 700w,
-                 {{ asset("img/{$information->imgDesktop}") }} 1024w"
-                 sizes="(max-width: 700px) 100vw, 1024px"
+            <img
                  class="rounded-lg"
-                 src="{{ asset("img/{$information->imgDesktop}") }}"
+                 src="{{ asset("img/{$information->img}") }}"
                  alt="{{ $information->imgAlt }}"
             >
         </div>

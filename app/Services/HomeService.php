@@ -100,14 +100,8 @@ class HomeService implements LocationServiceInterface
         $performance = new stdClass();
 
         $performance->title = '<strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">Goal-Driven</strong> Websites';
-        $performance->paragraph1 = 'Here is our benchmark for the <a target="_blank" class="text-brand-primary underline" href="https://discordbrowser.com">DiscordBrowser.</a>';
-        $performance->paragraph2 = 'Check the benchmark for your site at <a target="_blank" class="text-brand-primary underline" href="https://pagespeed.web.dev/">Google\'s Pagespeed Insights.</a>';
-        $performance->imgMobile = 'website-pagespeed-score-mobile.webp';
-        $performance->imgDesktop = 'website-pagespeed-score-desktop.webp';
-        $performance->imgAlt = 'discordbrowser pagespeed insights';
 
         $performance->lists = [];
-
         $perf1 = new stdClass();
         $perf1->title = 'Do you choose between beautiful site, or good performance?';
         $perf1->paragraph = 'You can have both!';
@@ -129,6 +123,12 @@ class HomeService implements LocationServiceInterface
             'Even our massive sites filled to the brim with functionality load instantly.'
         ];
         $performance->lists[] = $perf2;
+
+        $performance->paragraph1 = 'Here is our benchmark for the <a target="_blank" class="text-brand-primary underline" href="https://discordbrowser.com">DiscordBrowser.</a>';
+        $performance->paragraph2 = 'Check the benchmark for your site at <a target="_blank" class="text-brand-primary underline" href="https://pagespeed.web.dev/">Google\'s Pagespeed Insights.</a>';
+        $performance->imgMobile = 'website-pagespeed-score-mobile.webp';
+        $performance->imgDesktop = 'cropped-zenivora-pagespeed.webp';
+        $performance->imgAlt = 'discordbrowser pagespeed insights';
 
         return $performance;
     }

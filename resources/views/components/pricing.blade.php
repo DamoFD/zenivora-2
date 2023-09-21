@@ -34,7 +34,7 @@
             <hr class="border-gray-500 mx-6" />
             <ul class="text-gray-200 font-roboto list-disc list-inside mt-4 mb-10 flex flex-col space-y-2 px-6">
                 <li>Sitemap Analysis</li>
-                <li>Up to 25 pages</li>
+                <li>Up to 15 pages</li>
                 <li>Wireframe/Planning</li>
                 <li>6,000 Words Original Copy</li>
                 <li>1 SEO Optimized Blog</li>
