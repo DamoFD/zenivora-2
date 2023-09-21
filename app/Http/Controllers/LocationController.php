@@ -16,6 +16,13 @@ class LocationController extends Controller
         $this->serviceFactory = $serviceFactory;
     }
 
+    public function index(): View
+    {
+        $locations = ServiceFactory::getLocations();
+
+        return view('location.index', compact('locations'));
+    }
+
     // Get Location View
     public function show($location): View
     {
@@ -27,6 +34,6 @@ class LocationController extends Controller
 
         $data = $service->getData();
 
-        return view("location", compact('data'));
+        return view("location.show", compact('data'));
     }
 }
