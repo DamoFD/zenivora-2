@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Helpers\SchemaHelper;
 use stdClass;
 
 class PittsburghPAService implements LocationServiceInterface
@@ -21,6 +22,7 @@ class PittsburghPAService implements LocationServiceInterface
             'security' => $this->getSecurity(),
             'seo' => $this->getSeo(),
             'faq' => $this->getFaq(),
+            'schema' => SchemaHelper::getSchema($this->getfaq()->lists),
         ];
     }
 
@@ -302,6 +304,4 @@ class PittsburghPAService implements LocationServiceInterface
 
         Return $number;
     }
-
 }
-

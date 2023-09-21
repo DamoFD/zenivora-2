@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Helpers\SchemaHelper;
 use stdClass;
 
 class RenoNVService implements LocationServiceInterface
@@ -21,6 +22,7 @@ class RenoNVService implements LocationServiceInterface
             'security' => $this->getSecurity(),
             'seo' => $this->getSeo(),
             'faq' => $this->getfaq(),
+            'schema' => SchemaHelper::getSchema($this->getfaq()->lists),
         ];
     }
 
