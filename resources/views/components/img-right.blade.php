@@ -6,7 +6,7 @@
                     <div class="mb-4">
                         <h3 class="text-white text-lg lg:text-xl font-mont font-extrabold">{{ $list->title }}</h3>
                         <p class="text-white text-lg lg:text-xl font-mont font-extrabold mt-2">{{ $list->paragraph }}</p>
-                        <ul class="list-disc list-inside flex flex-col space-y-2 mt-2">
+                        <ul class="list-disc pl-4 flex flex-col space-y-2 mt-2">
                             @foreach($list->list as $item)
                                 <li class="text-white font-roboto">{!! $item !!}</li>
                             @endforeach
