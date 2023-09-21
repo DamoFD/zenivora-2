@@ -99,14 +99,8 @@ class RenoNVService implements LocationServiceInterface
         $performance = new stdClass();
 
         $performance->title = '<strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">Goal-Driven</strong> Websites';
-        $performance->paragraph1 = 'Here is our benchmark for the <a target="_blank" class="text-brand-primary underline" href="https://discordbrowser.com">DiscordBrowser.</a>';
-        $performance->paragraph2 = 'Check the benchmark for your site at <a target="_blank" class="text-brand-primary underline" href="https://pagespeed.web.dev/">Google\'s Pagespeed Insights.</a>';
-        $performance->imgMobile = 'website-pagespeed-score-mobile.webp';
-        $performance->imgDesktop = 'website-pagespeed-score-desktop.webp';
-        $performance->imgAlt = 'discordbrowser pagespeed insights';
 
         $performance->lists = [];
-
         $perf1 = new stdClass();
         $perf1->title = 'Do you choose between beautiful site, or good performance?';
         $perf1->paragraph = 'You can have both!';
@@ -129,6 +123,11 @@ class RenoNVService implements LocationServiceInterface
         ];
         $performance->lists[] = $perf2;
 
+        $performance->paragraph1 = 'Here is our benchmark for Zenivora';
+        $performance->paragraph2 = 'Check the benchmark for your site at <a target="_blank" class="text-brand-primary underline" href="https://pagespeed.web.dev/">Google\'s Pagespeed Insights.</a>';
+        $performance->img = 'cropped-zenivora-pagespeed.webp';
+        $performance->imgAlt = 'zenivora pagespeed insights';
+
         return $performance;
     }
 
@@ -140,13 +139,8 @@ class RenoNVService implements LocationServiceInterface
         $security = new stdClass();
 
         $security->title = 'Enterprise-class <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">security</strong>';
-        $security->paragraph1 = 'Here is a visual representation of <a target="_blank" class="text-brand-primary underline" href="https://threatmap.checkpoint.com/">real-time cyberattacks</a>';
-        $security->paragraph2 = 'Check your safe browsing status <a target="_blank" class="text-brand-primary underline" href="https://transparencyreport.google.com/safe-browsing/search?hl=en">Google\'s Transparency Report.</a>';
-        $security->imgMobile = 'arch-rice-mobile.webp';
-        $security->imgDesktop = 'arch-rice-desktop.webp';
-        $security->imgAlt = 'Arch Linux Security Practices';
-        $security->lists = [];
 
+        $security->lists = [];
         $sec1 = new stdClass();
         $sec1->title = 'Why does security matter?';
         $sec1->paragraph = 'Security is important from a legal and moral standpoint.';
@@ -169,6 +163,11 @@ class RenoNVService implements LocationServiceInterface
         ];
         $security->lists[] = $sec2;
 
+        $security->paragraph1 = 'Here is a visual representation of <a target="_blank" class="text-brand-primary underline" href="https://threatmap.checkpoint.com/">real-time cyberattacks</a>';
+        $security->paragraph2 = 'Check your safe browsing status <a target="_blank" class="text-brand-primary underline" href="https://transparencyreport.google.com/safe-browsing/search?hl=en">Google\'s Transparency Report.</a>';
+        $security->img = 'arch-resize.webp';
+        $security->imgAlt = 'Arch Linux Security Practices';
+
         return $security;
     }
 
@@ -180,13 +179,8 @@ class RenoNVService implements LocationServiceInterface
         $seo = new stdClass();
 
         $seo->title = 'Local <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">SEO Expert</strong> in Reno, Nevada';
-        $seo->paragraph1 = 'Here is our traffic for the DiscordBrowser after implementing our SEO techniques.</a>';
-        $seo->paragraph2 = 'Check your backlink profile with <a target="_blank" href="https://ahrefs.com/backlink-checker" class="text-brand-primary underline">ahrefs</a>';
-        $seo->imgMobile = 'discordbrowser-stats-mobile.webp';
-        $seo->imgDesktop = 'discordbrowser-stats-desktop.webp';
-        $seo->imgAlt = 'discordbrowser stats';
-        $seo->lists = [];
 
+        $seo->lists = [];
         $seo1 = new stdClass();
         $seo1->title = '8.5 billion searches take place on Google every day.';
         $seo1->paragraph = 'We know what your customers are searching.';
@@ -208,6 +202,11 @@ class RenoNVService implements LocationServiceInterface
             'Google drives 8 times more traffic than all social media combined'
         ];
         $seo->lists[] = $seo2;
+
+        $seo->paragraph1 = 'Here is our traffic for the DiscordBrowser after implementing our SEO techniques.</a>';
+        $seo->paragraph2 = 'Check your backlink profile with <a target="_blank" href="https://ahrefs.com/backlink-checker" class="text-brand-primary underline">ahrefs</a>';
+        $seo->img = 'discordbrowser-stats-desktop.webp';
+        $seo->imgAlt = 'discordbrowser stats';
 
         return $seo;
     }

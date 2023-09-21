@@ -9,9 +9,9 @@ class LocationSitemapController extends Controller
     public function index(): Response
     {
         $locations = ServiceFactory::getLocations();
+
         return response()
             ->view('sitemap.locations.index', compact('locations'))
             ->header('Content-Type', 'text/xml');
-
     }
 }

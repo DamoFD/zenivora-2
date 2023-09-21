@@ -8,7 +8,7 @@
                         <p class="text-white text-lg lg:text-xl font-mont font-extrabold mt-2">{{ $list->paragraph }}</p>
                         <ul class="list-disc list-inside flex flex-col space-y-2 mt-2">
                             @foreach($list->list as $item)
-                                <li class="text-white font-roboto">{{ $item }}</li>
+                                <li class="text-white font-roboto">{!! $item !!}</li>
                             @endforeach
                         </ul>
                     </div>
@@ -19,12 +19,9 @@
             </div>
 
             <div>
-                <img srcset="
-                    {{ asset("img/{$information->imgMobile}") }} 700w,
-                    {{ asset("img/{$information->imgDesktop}") }} 1024w"
-                     sizes="(max-width: 700px) 100vw, 1024px"
-                     class="rounded-lg"
-                     src="{{ asset("img/{$information->imgDesktop}") }}"
+                <img
+                     class="rounded-lg w-full"
+                     src="{{ asset("img/{$information->img}") }}"
                      alt="{{ $information->imgAlt }}"
                 >
             </div>

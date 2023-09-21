@@ -101,7 +101,6 @@ class PittsburghPAService implements LocationServiceInterface
         $performance->title = 'Industry leading <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">performance</strong>';
 
         $performance->lists = [];
-
         $perf1 = new stdClass();
         $perf1->title = 'Do you choose between beautiful site, or good performance?';
         $perf1->paragraph = 'You can have both!';
@@ -124,11 +123,10 @@ class PittsburghPAService implements LocationServiceInterface
         ];
         $performance->lists[] = $perf2;
 
-        $performance->paragraph1 = 'Here is our benchmark for the <a target="_blank" class="text-brand-primary underline" href="https://discordbrowser.com">DiscordBrowser.</a>';
+        $performance->paragraph1 = 'Here is our benchmark for Zenivora';
         $performance->paragraph2 = 'Check the benchmark for your site at <a target="_blank" class="text-brand-primary underline" href="https://pagespeed.web.dev/">Google\'s Pagespeed Insights.</a>';
-        $performance->imgMobile = 'website-pagespeed-score-mobile.webp';
-        $performance->imgDesktop = 'website-pagespeed-score-desktop.webp';
-        $performance->imgAlt = 'discordbrowser pagespeed insights';
+        $performance->img = 'cropped-zenivora-pagespeed.webp';
+        $performance->imgAlt = 'zenivora pagespeed insights';
 
         return $performance;
     }
@@ -167,8 +165,7 @@ class PittsburghPAService implements LocationServiceInterface
 
         $security->paragraph1 = 'Here is a visual representation of <a target="_blank" class="text-brand-primary underline" href="https://threatmap.checkpoint.com/">real-time cyberattacks</a>';
         $security->paragraph2 = 'Check your safe browsing status <a target="_blank" class="text-brand-primary underline" href="https://transparencyreport.google.com/safe-browsing/search?hl=en">Google\'s Transparency Report.</a>';
-        $security->imgMobile = 'arch-rice-mobile.webp';
-        $security->imgDesktop = 'arch-rice-desktop.webp';
+        $security->img = 'arch-resize.webp';
         $security->imgAlt = 'Arch Linux Security Practices';
 
         return $security;
@@ -209,8 +206,7 @@ class PittsburghPAService implements LocationServiceInterface
 
         $seo->paragraph1 = 'Here is our traffic for the DiscordBrowser after implementing our SEO techniques.</a>';
         $seo->paragraph2 = 'Check your backlink profile with <a target="_blank" href="https://ahrefs.com/backlink-checker" class="text-brand-primary underline">ahrefs</a>';
-        $seo->imgMobile = 'discordbrowser-stats-mobile.webp';
-        $seo->imgDesktop = 'discordbrowser-stats-desktop.webp';
+        $seo->img = 'discordbrowser-stats-desktop.webp';
         $seo->imgAlt = 'discordbrowser stats';
 
         return $seo;
