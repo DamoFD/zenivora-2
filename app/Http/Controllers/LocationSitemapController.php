@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Response;
 use App\Services\ServiceFactory;
-
 class LocationSitemapController extends Controller
 {
     public function index(): Response

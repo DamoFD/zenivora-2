@@ -2,6 +2,7 @@
 
 // use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\LocationSitemapController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\LocationSitemapController;
@@ -32,6 +33,7 @@ Route::get('/sitemap/pages.xml', function () {
 })->name('sitemap.pages.index');
 Route::get('/sitemap/locations.xml', [LocationSitemapController::class, 'index'])->name('sitemap.locations.index');
 
+Route::get('/sitemap/locations.xml', [LocationSitemapController::class, 'index'])->name('sitemap.locations.index');
 /*
 Route::get('/dashboard', function () {
     return view('dashboard');
