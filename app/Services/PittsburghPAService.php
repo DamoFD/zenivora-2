@@ -125,8 +125,7 @@ class PittsburghPAService implements LocationServiceInterface
 
         $performance->paragraph1 = 'Here is our benchmark for Zenivora';
         $performance->paragraph2 = 'Check the benchmark for your site at <a target="_blank" class="text-brand-primary underline" href="https://pagespeed.web.dev/">Google\'s Pagespeed Insights.</a>';
-        $performance->imgMobile = 'website-pagespeed-score-mobile.webp';
-        $performance->imgDesktop = 'cropped-zenivora-pagespeed.webp';
+        $performance->img = 'cropped-zenivora-pagespeed.webp';
         $performance->imgAlt = 'zenivora pagespeed insights';
 
         return $performance;
@@ -207,8 +206,7 @@ class PittsburghPAService implements LocationServiceInterface
 
         $seo->paragraph1 = 'Here is our traffic for the DiscordBrowser after implementing our SEO techniques.</a>';
         $seo->paragraph2 = 'Check your backlink profile with <a target="_blank" href="https://ahrefs.com/backlink-checker" class="text-brand-primary underline">ahrefs</a>';
-        $seo->imgMobile = 'discordbrowser-stats-mobile.webp';
-        $seo->imgDesktop = 'discordbrowser-stats-desktop.webp';
+        $seo->img = 'discordbrowser-stats-desktop.webp';
         $seo->imgAlt = 'discordbrowser stats';
 
         return $seo;
