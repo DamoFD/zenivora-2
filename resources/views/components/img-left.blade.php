@@ -22,7 +22,9 @@
             @endforeach
             <p class="text-white text-lg lg:text-xl font-mont font-extrabold mt-10">{!! $information->paragraph1 !!}</p>
             <p class="text-white text-lg lg:text-xl font-mont font-extrabold mt-2 mb-5">{!! $information->paragraph2 !!}</p>
-            <x-primary-link href="#contact">Get Quote</x-primary-link>
+                <div class="flex justify-center md:justify-start w-full">
+                    <x-primary-link href="#contact">Get Quote</x-primary-link>
+                </div>
         </div>
     </div>
 </section>
