@@ -180,7 +180,7 @@ class HomeService implements LocationServiceInterface
         $seo = new stdClass();
 
         $seo->title = 'Local <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">SEO Expert</strong> near you.';
-        $seo->paragraph1 = 'Here is our traffic for the DiscordBrowser after implementing our SEO techniques.</a>';
+        $seo->paragraph1 = 'Here is our traffic for DiscordBrowser after implementing our SEO techniques.</a>';
         $seo->paragraph2 = 'Check your backlink profile with <a target="_blank" href="https://ahrefs.com/backlink-checker" class="text-brand-primary underline">ahrefs</a>';
         $seo->img = 'discordbrowser-stats-desktop.webp';
         $seo->imgAlt = 'discordbrowser stats';
