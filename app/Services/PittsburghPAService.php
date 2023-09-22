@@ -35,6 +35,7 @@ class PittsburghPAService implements LocationServiceInterface
 
         $data->title = 'Pittsburgh Website Designers';
         $data->description = 'Elevate your brand with Zenivora, the leading Pittsburgh Website Designers. Expertise in responsive design, SEO, and e-commerce solutions. Based in Pittsburgh, PA.';
+        $data->img = 'pittsburgh-city.webp';
 
         return $data;
     }

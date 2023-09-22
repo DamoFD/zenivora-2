@@ -29,28 +29,28 @@ const canvas = document.querySelector('canvas'),
 
   if (windowSize > 1600) {
     dots = {
-      nb: 600, // number of particles
-      distance: 70, // max distance between particles for them to link
-      d_radius: 300, // radius from mouse location that particles will link
+      nb: 300, // number of particles
+      distance: 0, // max distance between particles for them to link
+      d_radius: 0, // radius from mouse location that particles will link
       array: [],
     };
   } else if (windowSize > 1300) {
     dots = {
-      nb: 575,
+      nb: 200,
       distance: 60,
       d_radius: 280,
       array: [],
     };
   } else if (windowSize > 1100) {
     dots = {
-      nb: 500,
+      nb: 200,
       distance: 55,
       d_radius: 250,
       array: [],
     };
   } else if (windowSize > 800) {
     dots = {
-      nb: 300,
+      nb: 200,
       distance: 0,
       d_radius: 0,
       array: [],
@@ -181,8 +181,8 @@ const canvas = document.querySelector('canvas'),
 
               ctx.strokeStyle = `rgb(81, 162, 233, ${1 - distanceRatio})`;
 
-              ctx.stroke();
-              ctx.closePath();
+              //ctx.stroke();
+              //ctx.closePath();
             }
           }
         }
@@ -209,19 +209,20 @@ const canvas = document.querySelector('canvas'),
     dot.animate();
   }
 
-  window.onmousemove = function (parameter) {
-    mousePosition.x = parameter.pageX;
-    mousePosition.y = parameter.pageY;
+
+  //window.onmousemove = function (parameter) {
+   // mousePosition.x = parameter.pageX;
+   // mousePosition.y = parameter.pageY;
 
     // sometimes if the mouse is off screen on refresh, it bugs out
-    try {
+    //try {
       // want the first dot to follow the mouse
-      dots.array[0].x = parameter.pageX;
-      dots.array[0].y = parameter.pageY;
-    } catch {
+     // dots.array[0].x = parameter.pageX;
+      //dots.array[0].y = parameter.pageY;
+    //} catch {
       //
-    }
-  };
+    //}
+  //};
 
   mousePosition.x = window.innerWidth / 2;
   mousePosition.y = window.innerHeight / 2;

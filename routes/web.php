@@ -27,6 +27,10 @@ Route::post('/email', [EmailController::class, 'sendEmail'])->name('email');
 
 Route::get('/locations', [LocationController::class, 'index'])->name('location.index');
 
+Route::get('/globe', function () {
+    return view('globe');
+});
+
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.index');
 Route::get('/sitemap/pages.xml', function () {
     $content = view('sitemap.pages.index')->render();

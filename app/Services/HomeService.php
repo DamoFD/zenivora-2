@@ -36,6 +36,7 @@ class HomeService implements LocationServiceInterface
 
         $data->title = 'Zenivora Website Designers';
         $data->description = 'Elevate your brand with Zenivora, the leading team of Website Designers. Expertise in responsive design, SEO, and e-commerce solutions.';
+        $data->img = 'earth.webp';
 
         return $data;
     }

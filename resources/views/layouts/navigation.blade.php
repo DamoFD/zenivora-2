@@ -119,7 +119,7 @@
                 </x-responsive-nav-link>
             @endif--}}
 
-            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
+            <x-responsive-nav-link :href="$homeRoute" :active="request()->routeIs('home') || request()->routeIs('location.show')">
                 {{ __('Home') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="#about">
