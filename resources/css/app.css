@@ -56,11 +56,33 @@ h2.span {
 
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
   to {
-    width: 34rem;
+    width: 13rem;
   }
+}
+
+@media only screen and (min-width: 768px) {
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 25.5rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 34rem;
+        }
+    }
 }
 
 @keyframes blink {
