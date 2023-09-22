@@ -42,4 +42,14 @@ class LocationController extends Controller
 
         return view("location.show", compact('data'));
     }
+
+    protected function fetchServiceLocation(string $location): array
+    {
+        $service = $this->serviceFactory->make($location);
+
+        if (!$service) {
+            abort(404, 'Location not found');
+        }
+        return $service;
+    }
 }
