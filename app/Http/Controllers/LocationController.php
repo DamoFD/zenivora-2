@@ -18,9 +18,15 @@ class LocationController extends Controller
 
     public function index(): View
     {
+        $data = [];
         $locations = ServiceFactory::getLocations();
 
-        return view('location.index', compact('locations'));
+        foreach ($locations as $location) {
+            $service = $this->serviceFactory->make($location);
+            $data[$location] = $service->getMetaData();
+        }
+
+        return view('location.index', compact('data'));
     }
 
     // Get Location View

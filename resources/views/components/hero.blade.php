@@ -25,7 +25,7 @@
     @else
         <img src="{{ asset('img/' . $img) }}" class="absolute w-full object-cover h-3/4 bottom-0 left-0">
     @endif
-    <h1 class="z-[2] font-extrabold text-4xl md:text-7xl lg:text-8xl font-mont text-brand-primary uppercase typing mb-2 md:mb-6 lg:mb-12">Zenivora</h1>
+    <h1 class="z-[2] w-full font-extrabold text-4xl md:text-7xl lg:text-8xl font-mont text-brand-primary uppercase typing mb-2 md:mb-6 lg:mb-12">Zenivora</h1>
     <h2 class="hidden lg:block span loader uppercase zoom-out font-roboto">
         @foreach ($lettersDesktop as $letter)
             <span>{!! $letter !!}</span>
