@@ -1,5 +1,3 @@
-@php
-@endphp
 <x-app-layout>
     @section('title', 'Local locations')
     @section('description', 'Contact a local Zenivora location near you!')
@@ -17,10 +15,15 @@
         </section>
         <section>
             @foreach ($data as $name => $location)
+                @php
+                    list($city, $state) = explode('-', $name);
+                    $city = ucwords($city);
+                    $state = strtoupper($state);
+                @endphp
                 <a href="{{ route('location.show', ['location' => $name]) }}">
                     <section class="w-full radial h-96 relative font-roboto overflow-hidden rounded-lg border-4 border-brand-primary mb-4" >
                         <img src="{{ asset('img/' . $location->img) }}" class="w-full h-full transition-all duration-300 object-cover hover:scale-[1.1] object-center" />
-                        <h1 class="text-white text-6xl absolute left-0 top-0 p-4">{{ $name }}</h1>
+                        <h1 class="text-white text-4xl absolute left-0 top-0 p-4">{{ $city }}, {{ $state }}</h1>
                     </section>
                 </a>
             @endforeach
@@ -145,6 +148,6 @@
 
             animate();
             }
-
+ */
 </script>
 </x-app-layout>
