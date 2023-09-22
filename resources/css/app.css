@@ -340,3 +340,20 @@ h2.span {
   font-size: calc(var(--marquee-height)*3/4); /* 5rem; */
   white-space: nowrap;
 }
+
+.radial::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, #1f2937, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* So it doesn't interfere with clicks etc. */
+}
+
+.radial:hover::before {
+    opacity: 1;
+}
