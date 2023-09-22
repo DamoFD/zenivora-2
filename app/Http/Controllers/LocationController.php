@@ -16,6 +16,19 @@ class LocationController extends Controller
         $this->serviceFactory = $serviceFactory;
     }
 
+    public function index(): View
+    {
+        $data = [];
+        $locations = ServiceFactory::getLocations();
+
+        foreach ($locations as $location) {
+            $service = $this->serviceFactory->make($location);
+            $data[$location] = $service->getMetaData();
+        }
+
+        return view('location.index', compact('data'));
+    }
+
     // Get Location View
     public function show($location): View
     {
@@ -27,6 +40,16 @@ class LocationController extends Controller
 
         $data = $service->getData();
 
-        return view("location", compact('data'));
+        return view("location.show", compact('data'));
+    }
+
+    protected function fetchServiceLocation(string $location): array
+    {
+        $service = $this->serviceFactory->make($location);
+
+        if (!$service) {
+            abort(404, 'Location not found');
+        }
+        return $service;
     }
 }

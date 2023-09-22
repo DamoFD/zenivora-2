@@ -35,6 +35,7 @@ class RenoNVService implements LocationServiceInterface
 
         $data->title = 'Reno Website Designers';
         $data->description = 'Elevate your brand with Zenivora, the leading Reno Website Designers. Expertise in responsive design, SEO, and e-commerce solutions. Based in Reno, NV.';
+        $data->img = 'reno-background.webp';
 
         return $data;
     }
