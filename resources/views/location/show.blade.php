@@ -8,8 +8,8 @@
         </script>
     @endsection
     <x-hero
-        :subHeader="$data['meta']->title"
-        :img="$data['meta']->img"/>
+        :information="$data['meta']"
+    />
     <x-about :information="$data['about']"/>
     <x-technology :technologies="$data['technologies']" />
     <x-img-right :information="$data['performance']" />
