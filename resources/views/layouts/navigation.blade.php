@@ -16,8 +16,11 @@
         </a>
 
         <ul class="hidden space-x-8 sm:-my-px sm:flex items-center">
-            <x-nav-link :href="$homeRoute" active="request()->routeIs('home') || request()->routeIs('location.show')">
+            <x-nav-link :href="$homeRoute" :active="request()->routeIs('home') || request()->routeIs('location.show')">
                 {{ __('Home') }}
+            </x-nav-link>
+            <x-nav-link :href="route('location.index')" :active="request()->routeIs('location.index')">
+                {{ __('Locations') }}
             </x-nav-link>
             <x-nav-link href="#about">
                 {{ __('About') }}
@@ -121,6 +124,9 @@
 
             <x-responsive-nav-link :href="$homeRoute" :active="request()->routeIs('home') || request()->routeIs('location.show')">
                 {{ __('Home') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('location.index')" :active="request()->routeIs('location.index')">
+                {{ __('Locations') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="#about">
                 {{ __('About') }}
