@@ -1,5 +1,3 @@
-@php
-@endphp
 <x-app-layout>
     @section('title', 'Local locations')
     @section('description', 'Contact a local Zenivora location near you!')
@@ -16,11 +14,11 @@
             <div id="container" class="fixed left-0 top-0 w-1/2"></div>
         </section>
         <section>
-            @foreach ($data as $name => $location)
+            @foreach ($data as $location)
                 <a href="{{ route('location.show', ['location' => $name]) }}">
                     <section class="w-full radial h-96 relative font-roboto overflow-hidden rounded-lg border-4 border-brand-primary mb-4" >
                         <img src="{{ asset('img/' . $location->img) }}" class="w-full h-full transition-all duration-300 object-cover hover:scale-[1.1] object-center" />
-                        <h1 class="text-white text-6xl absolute left-0 top-0 p-4">{{ $name }}</h1>
+                        <h1 class="text-white text-6xl absolute left-0 top-0 p-4">{{ $location->name }}</h1>
                     </section>
                 </a>
             @endforeach
