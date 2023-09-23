@@ -13,7 +13,7 @@
             </div>
             <div id="container" class="lg:fixed lg:left-0 lg:top-0 lg:w-1/2"></div>
         </section>
-        <section class="order-1 lg:order-2 px-2">
+        <section class="order-1 lg:order-2 px-2 md:px-8">
             @foreach ($data as $name => $location)
                 @php
                     list($city, $state) = explode('-', $name);

@@ -19,6 +19,9 @@
             <x-nav-link :href="$homeRoute" active="request()->routeIs('home') || request()->routeIs('location.show')">
                 {{ __('Home') }}
             </x-nav-link>
+            <x-nav-link href="locations">
+                {{ __('Locations') }}
+            </x-nav-link>
             <x-nav-link href="#about">
                 {{ __('About') }}
             </x-nav-link>
@@ -121,6 +124,9 @@
 
             <x-responsive-nav-link :href="$homeRoute" :active="request()->routeIs('home') || request()->routeIs('location.show')">
                 {{ __('Home') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="locations">
+                {{ __('Locations') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="#about">
                 {{ __('About') }}
