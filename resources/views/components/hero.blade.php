@@ -1,5 +1,5 @@
 @php
-    $arr = str_split($subHeader);
+    $arr = str_split($information->title);
 
     $lettersDesktop = array_map(function($item) {
          return ($item === ' ') ? '&nbsp;' : $item;
@@ -23,7 +23,13 @@
     @if (request()->routeIs('home'))
         {{--<img src="{{ asset('img/' . $img) }}" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-3/4" />--}}
     @else
-        <img src="{{ asset('img/' . $img) }}" class="absolute w-full object-cover h-3/4 bottom-0 left-0">
+        <img
+            srcset="{{ asset('img/' . $information->img_mobile) }} 1120w, {{ asset('img/' . $information->img) }} 1500w"
+            sizes="(max-width: 600px) 1120px, 1500px"
+            src="{{ asset('img/' . $information->img) }}"
+            class="absolute w-full object-cover h-3/4 bottom-0 left-0"
+            alt="{{ $information->title }}"
+        >
     @endif
     <h1 class="z-[2] w-full font-extrabold text-4xl md:text-7xl lg:text-8xl font-mont text-brand-primary uppercase typing mb-2 md:mb-6 lg:mb-12">Zenivora</h1>
     <h2 class="hidden lg:block span loader uppercase zoom-out font-roboto">
