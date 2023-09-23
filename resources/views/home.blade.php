@@ -147,7 +147,7 @@ function animate() {
 
     animate();
     }
-
+*/
 </script>
 
 </x-app-layout>
