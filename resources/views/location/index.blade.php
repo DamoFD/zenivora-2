@@ -1,8 +1,8 @@
 <x-app-layout>
     @section('title', 'Local locations')
     @section('description', 'Contact a local Zenivora location near you!')
-    <section class="grid grid-cols-2 gap-4 mt-20">
-        <section>
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-24">
+        <section class="h-screen order-2 lg:order-1">
             <div id="info">
                 <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by the Google Data Arts Team <span class="bull">&bull;</span> Data acquired from <a href="http://sedac.ciesin.columbia.edu/gpw/">SEDAC</a>
             </div>
@@ -11,9 +11,9 @@
                 <span id="year1995" class="year">1995</span>
                 <span id="year2000" class="year">2000</span>
             </div>
-            <div id="container" class="fixed left-0 top-0 w-1/2"></div>
+            <div id="container" class="lg:fixed lg:left-0 lg:top-0 lg:w-1/2"></div>
         </section>
-        <section>
+        <section class="order-1 lg:order-2 px-2">
             @foreach ($data as $name => $location)
                 @php
                     list($city, $state) = explode('-', $name);
@@ -21,7 +21,7 @@
                     $state = strtoupper($state);
                 @endphp
                 <a href="{{ route('location.show', ['location' => $name]) }}">
-                    <section class="w-full radial h-96 relative font-roboto overflow-hidden rounded-lg border-4 border-brand-primary mb-4" >
+                    <section class="w-full radial h-96 relative font-roboto overflow-hidden rounded-lg border-2 lg:border-4 border-brand-primary mb-4" >
                         <img src="{{ asset('img/' . $location->img) }}" class="w-full h-full transition-all duration-300 object-cover hover:scale-[1.1] object-center" />
                         <h1 class="text-white text-4xl absolute left-0 top-0 p-4">{{ $city }}, {{ $state }}</h1>
                     </section>
