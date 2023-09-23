@@ -5,4 +5,8 @@
         <loc>{{ route('sitemap.pages.index') }}</loc>
         <lastmod>{{ date('c') }}</lastmod>
     </sitemap>
+    <sitemap>
+        <loc>{{ route("sitemap.locations.index") }}</loc>
+        <lastmod>{{ date('c') }}</lastmod>
+    </sitemap>
 </sitemapindex>

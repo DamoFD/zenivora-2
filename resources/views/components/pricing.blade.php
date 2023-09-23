@@ -1,5 +1,5 @@
 <section class="w-full min-h-screen flex justify-center items-center flex-col mt-56 lg:mt-0" id="pricing">
-    <h2 class="text-white text-3xl font-mont font-extrabold text-center">Take your business to the <br /><strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">next level</strong></h2>
+    <h2 class="text-white text-3xl font-mont font-extrabold text-center w-11/12 md:mb-6">Take your business to the <strong class="bg-gradient-to-r from-brand-primary to-blue-400 text-transparent bg-clip-text">next level</strong></h2>
     <div class="flex flex-col lg:flex-row justify-between items-center lg:items-end w-11/12 space-y-10 lg:space-y-0 lg:w-3/4 mt-10">
         <div class="bg-brand-gray flex flex-col border border-brand-primary rounded-lg p-6 w-full lg:w-1/4">
             <h3 class="text-white text-2xl font-mont font-extrabold uppercase">Essential</h3>
@@ -34,7 +34,7 @@
             <hr class="border-gray-500 mx-6" />
             <ul class="text-gray-200 font-roboto list-disc list-inside mt-4 mb-10 flex flex-col space-y-2 px-6">
                 <li>Sitemap Analysis</li>
-                <li>Up to 25 pages</li>
+                <li>Up to 15 pages</li>
                 <li>Wireframe/Planning</li>
                 <li>6,000 Words Original Copy</li>
                 <li>1 SEO Optimized Blog</li>

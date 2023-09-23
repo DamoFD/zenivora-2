@@ -2,7 +2,10 @@
 
 // use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\LocationSitemapController;
 use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\LocationController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Response;
 
@@ -17,35 +20,25 @@ use Illuminate\Http\Response;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [HomeController::class, 'home'])->name('home');
+
 
 Route::post('/email', [EmailController::class, 'sendEmail'])->name('email');
+
+Route::get('/locations', [LocationController::class, 'index'])->name('location.index');
+
+Route::get('/globe', function () {
+    return view('globe');
+});
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.index');
 Route::get('/sitemap/pages.xml', function () {
     $content = view('sitemap.pages.index')->render();
     return response($content, Response::HTTP_OK)->header('Content-Type', 'text/xml');
 })->name('sitemap.pages.index');
+Route::get('/sitemap/locations.xml', [LocationSitemapController::class, 'index'])->name('sitemap.locations.index');
 
 /*
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
-
-Route::get('/locations', function () {
-    return view('locations');
-})->name('locations');
-
-Route::get('/pricing', function () {
-    return view('pricing');
-})->name('pricing');
-
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact');
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -58,3 +51,4 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 */
+Route::get('/{location}', [LocationController::class, 'show'])->name('location.show');

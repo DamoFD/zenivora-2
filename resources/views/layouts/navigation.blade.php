@@ -1,13 +1,26 @@
+@php
+    $currentRouteName = Route::currentRouteName();
+
+    if ($currentRouteName == 'location.show'){
+        $location = Route::input('location');
+        $homeRoute = route('location.show', $location);
+    } else {
+        $homeRoute = route('home');
+    }
+@endphp
 <header class="bg-brand-gray z-[5] fixed top-0 left-0 w-full" x-data="{ open: false }">
     <nav class="w-full mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 lg:h-22 lg:mt-2">
 
-        <a href="{{ route('home') }}">
+        <a href="{{ $homeRoute }}">
             <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
         </a>
 
         <ul class="hidden space-x-8 sm:-my-px sm:flex items-center">
-            <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+            <x-nav-link :href="$homeRoute" :active="request()->routeIs('home') || request()->routeIs('location.show')">
                 {{ __('Home') }}
+            </x-nav-link>
+            <x-nav-link :href="route('location.index')" :active="request()->routeIs('location.index')">
+                {{ __('Locations') }}
             </x-nav-link>
             <x-nav-link href="#about">
                 {{ __('About') }}
@@ -109,8 +122,11 @@
                 </x-responsive-nav-link>
             @endif--}}
 
-            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
+            <x-responsive-nav-link :href="$homeRoute" :active="request()->routeIs('home') || request()->routeIs('location.show')">
                 {{ __('Home') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('location.index')" :active="request()->routeIs('location.index')">
+                {{ __('Locations') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="#about">
                 {{ __('About') }}
