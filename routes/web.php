@@ -6,6 +6,7 @@ use App\Http\Controllers\LocationSitemapController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProposalController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Response;
 
@@ -31,6 +32,8 @@ Route::get('/globe', function () {
     return view('globe');
 });
 
+Route::get('/proposals', [ProposalController::class, 'show'])->name('proposal.show');
+
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap.index');
 Route::get('/sitemap/pages.xml', function () {
     $content = view('sitemap.pages.index')->render();
@@ -38,7 +41,6 @@ Route::get('/sitemap/pages.xml', function () {
 })->name('sitemap.pages.index');
 Route::get('/sitemap/locations.xml', [LocationSitemapController::class, 'index'])->name('sitemap.locations.index');
 
-/*
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -50,5 +52,5 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-*/
+
 Route::get('/{location}', [LocationController::class, 'show'])->name('location.show');
